@@ -1,172 +1,60 @@
 ///////////////////////////////////////////////////////////
 //////////////////// DEFINE ANIMATIONS ////////////////////
 ///////////////////////////////////////////////////////////
+        
 
-/* var anim_p1_s1,
-    anim_p1_s2,
-    anim_p1_s3_1,
-    anim_p1_s3_2,
-    anim_p1_s3_3,
-    anim_p1_s4,
-    anim_p1_s5_1,
-    anim_p1_s5_2,
-    anim_p1_s5_3,    
+var anim_p1_s1_2,
+    anim_p1_s1_3,
+    anim_p1_s1_4,
+    anim_p1_s2_1,
+    anim_p1_s2_2,
+    anim_p1_s2_3,
+    anim_p1_s2_4,
+    anim_p1_s2_5,
+    anim_p1_s4_1,
+    anim_p1_s4_2,
     anim_p1_s6_1,
     anim_p1_s6_2,
-    anim_p1_s6_3,    
+    anim_p1_s6_3,
     anim_p2_s1_1,
     anim_p2_s1_2,
-    anim_p2_s2_1,
-    anim_p2_s2_2,
-    anim_p2_s2_3,
-    anim_p2_s3,
-    anim_p2_s4_0,
-    anim_p2_s4_1,
-    anim_p2_s4_2,
-    anim_p2_s4_6,
-    anim_p2_s4_7,
-    anim_p2_s5_1,
-    anim_p2_s5_2,
-    anim_p2_s5_3,
-    anim_p2_s5_4,
-    anim_p2_s6,
+    anim_p2_s1_3,
+    anim_p2_s1_4,
+    anim_p2_s4,
     anim_p3_s1,
-    anim_p3_s2,
-    anim_p3_s3,
-    anim_p3_s4,
+    anim_p3_s3_1,
+    anim_p3_s3_2,
     anim_p3_s5,
-    anim_p3_s6,
-    anim_p3_s7_1,
-    anim_p3_s7_2,
-    anim_p3_s7_3,
-    anim_p3_s7_4,
-  animator1
-        
+    anim_p3_s7,
+
+
+////////////////////////////////////////////////////////
+//////////// DESTROY ANIMATIONS SELECTION //////////////
+////////////////////////////////////////////////////////
 
 function init_anim(selector, data) {
-  bodymovin.destroy(anim_p1_s1);
-  bodymovin.destroy(anim_p1_s2);
-  bodymovin.destroy(anim_p1_s3_1);
-  bodymovin.destroy(anim_p1_s3_2);
-  bodymovin.destroy(anim_p1_s3_3);
-  bodymovin.destroy(anim_p1_s4);    
-  bodymovin.destroy(anim_p1_s5_1);
-  bodymovin.destroy(anim_p1_s5_1);
-  bodymovin.destroy(anim_p1_s5_2);
-  bodymovin.destroy(anim_p1_s5_3);
-  bodymovin.destroy(anim_p1_s6_1);
-  bodymovin.destroy(anim_p1_s6_2);
-  bodymovin.destroy(anim_p1_s6_3);
-  bodymovin.destroy(anim_p2_s1_1);
-  bodymovin.destroy(anim_p2_s1_2);
-  bodymovin.destroy(anim_p2_s2_1);
-  bodymovin.destroy(anim_p2_s2_2);
-  bodymovin.destroy(anim_p2_s2_3);
-  bodymovin.destroy(anim_p2_s3);
-  bodymovin.destroy(anim_p2_s4_0);
-  bodymovin.destroy(anim_p2_s4_1);
-  bodymovin.destroy(anim_p2_s4_2);
-  bodymovin.destroy(anim_p2_s4_6);
-  bodymovin.destroy(anim_p2_s4_7);
-  bodymovin.destroy(anim_p2_s5_1);
-  bodymovin.destroy(anim_p2_s5_2);
-  bodymovin.destroy(anim_p2_s5_3);
-  bodymovin.destroy(anim_p2_s5_4);
-  bodymovin.destroy(anim_p2_s6);
-  bodymovin.destroy(anim_p3_s1);
-  bodymovin.destroy(anim_p3_s2);
-  bodymovin.destroy(anim_p3_s3);
-  bodymovin.destroy(anim_p3_s4);    
-  bodymovin.destroy(anim_p3_s5);
-  bodymovin.destroy(anim_p3_s6);
-  bodymovin.destroy(anim_p3_s7_1);
-  bodymovin.destroy(anim_p3_s7_2);
-  bodymovin.destroy(anim_p3_s7_3);
-  bodymovin.destroy(anim_p3_s7_4);
-  bodymovin.destroy(animator1); */
-
-  //REPLACE LINES FROM HERE TO LINE 86 - MATT
-var anim_p1_s1,
-    anim_p1_s2,
-    anim_p1_s3_1,
-    anim_p1_s3_2,
-    anim_p1_s3_3,
-    anim_p1_s4,
-    anim_p1_s5_1,
-    anim_p1_s5_2,
-    anim_p1_s5_3,    
-    anim_p1_s6_1,
-    anim_p1_s6_2,
-    anim_p1_s6_3,    
-    anim_p2_s1_1,
-  anim_p2_s1_2,
-    anim_p2_s2_1,
-    anim_p2_s2_2,
-    anim_p2_s2_3,
-    anim_p2_s3,
-    anim_p2_s4_0,
-    anim_p2_s4_1,
-    anim_p2_s4_2,
-    anim_p2_s4_6,
-    anim_p2_s4_7,
-    anim_p2_s5_1,
-    anim_p2_s5_2,
-    anim_p2_s5_3,
-    anim_p2_s5_4,
-    anim_p2_s6,
-    anim_p3_s1,
-    anim_p3_s2,
-    anim_p3_s3,
-    anim_p3_s4,
-    anim_p3_s5,
-    anim_p3_s6,
-    anim_p3_s7_1,
-    anim_p3_s7_2,
-    anim_p3_s7_3,
-    anim_p3_s7_4,
-  animator1
-        
-
-function init_anim(selector, data) {
-  bodymovin.destroy(anim_p1_s1);
-  bodymovin.destroy(anim_p1_s2);
-  bodymovin.destroy(anim_p1_s3_1);
-  bodymovin.destroy(anim_p1_s3_2);
-  bodymovin.destroy(anim_p1_s3_3);
-  bodymovin.destroy(anim_p1_s4);    
-  bodymovin.destroy(anim_p1_s5_1);
-  bodymovin.destroy(anim_p1_s5_2);
-  bodymovin.destroy(anim_p1_s5_3);
-  bodymovin.destroy(anim_p1_s6_1);
-  bodymovin.destroy(anim_p1_s6_2);
-  bodymovin.destroy(anim_p1_s6_3);
-  bodymovin.destroy(anim_p2_s1_1);
-  bodymovin.destroy(anim_p2_s1_2);
-  bodymovin.destroy(anim_p2_s2_1);
-  bodymovin.destroy(anim_p2_s2_2);
-  bodymovin.destroy(anim_p2_s2_3);
-  bodymovin.destroy(anim_p2_s3);
-  bodymovin.destroy(anim_p2_s4_0);
-  bodymovin.destroy(anim_p2_s4_1);
-  bodymovin.destroy(anim_p2_s4_2);
-  bodymovin.destroy(anim_p2_s4_6);
-  bodymovin.destroy(anim_p2_s4_7);
-  bodymovin.destroy(anim_p2_s5_1);
-  bodymovin.destroy(anim_p2_s5_2);
-  bodymovin.destroy(anim_p2_s5_3);
-  bodymovin.destroy(anim_p2_s5_4);
-  bodymovin.destroy(anim_p2_s6);
-  bodymovin.destroy(anim_p3_s1);
-  bodymovin.destroy(anim_p3_s2);
-  bodymovin.destroy(anim_p3_s3);
-  bodymovin.destroy(anim_p3_s4);    
-  bodymovin.destroy(anim_p3_s5);
-  bodymovin.destroy(anim_p3_s6);
-  bodymovin.destroy(anim_p3_s7_1);
-  bodymovin.destroy(anim_p3_s7_2);
-  bodymovin.destroy(anim_p3_s7_3);
-  bodymovin.destroy(anim_p3_s7_4);
-  bodymovin.destroy(animator1);
+  bodymovin.destroy( anim_p1_s1_2 );
+  bodymovin.destroy( anim_p1_s1_3 );
+  bodymovin.destroy( anim_p1_s1_4 );
+  bodymovin.destroy( anim_p1_s2_1 );
+  bodymovin.destroy( anim_p1_s2_2 );
+  bodymovin.destroy( anim_p1_s2_3 );
+  bodymovin.destroy( anim_p1_s2_4 );
+  bodymovin.destroy( anim_p1_s2_5 );
+  bodymovin.destroy( anim_p1_s4_1 );
+  bodymovin.destroy( anim_p1_s4_2 );
+  bodymovin.destroy( anim_p1_s6_1 );
+  bodymovin.destroy( anim_p1_s6_2 );
+  bodymovin.destroy( anim_p1_s6_3 );
+  bodymovin.destroy( anim_p2_s1_1 );
+  bodymovin.destroy( anim_p2_s1_2 );
+  bodymovin.destroy( anim_p2_s1_3 );
+  bodymovin.destroy( anim_p2_s1_4 );
+  bodymovin.destroy( anim_p3_s1 );
+  bodymovin.destroy( anim_p3_s3_1 );
+  bodymovin.destroy( anim_p3_s3_2 );  
+  bodymovin.destroy( anim_p3_s5 );
+  bodymovin.destroy( anim_p3_s7 );
 
   
   var animData = {
