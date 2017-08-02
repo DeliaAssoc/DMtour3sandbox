@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title>Tour 2</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+  <!--    <link href="css/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/medium.css" />  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript">
+
+  var $windowWidth = $( window ).width(); 
+  adjustStyle( $windowWidth );
+  function adjustStyle(width) {
+    
+      width = parseInt(width);
+      if (width < 701) {
+        //alert('small');
+        console.log('small');
+        $("#size-stylesheet").attr("href", "css/small.css");
+      } else if ((width >= 701) && (width < 1650)) {
+        //alert('medium');
+        console.log('medium');
+        $("#size-stylesheet").attr("href", "css/medium.css");
+      } else {
+        //alert('large');
+        console.log('large');
+         $("#size-stylesheet").attr("href", "css/large.css");
+      }
+    } 
+
+
+            
+
+    // $(function() {
+    //  //adjustStyle($(this).width());
+    //  $(window).resize(function() {
+    //    adjustStyle(800);
+    //  });
+    // });
+
+  </script>
+  </head>
+  <body>
+    <div id="tour-wrapper">
+      <div id="header">
+        <img alt="header" src="images/header-placeholder.jpg" />
+      </div><!-- #header -->
+      <div id="main">
+
+        <div id="backlink">
+          <div class="container">
+            <strong class="start-over inactive"><a tabindex="0" href="./">&lt; Start Over</a></strong>
+            <strong class="back-to-site active"><a tabindex="0" href="#">&lt; Healthwise for Care Coordination for Salesforce</a></strong>
+          </div><!-- .container -->
+        </div><!-- #backlink -->
+
+        <div id="start" class="active">
+          <div class="container">
+            <div class="inner">
+              <div class="title">Before we get started, which experience would you like to preview?</div>
+              <form action="">
+                <fieldset>
+                  <label>
+                    <div class="icon education"><!-- <img alt="Accessing Health Education" src="images/access_icon.png" /> --></div>
+                    <input tabindex="0" type="radio" name="pathSelect" value="education" checked="checked" /><span>Accessing Health Education</span>
+                  </label>
+                  <label>
+                    <div class="icon planning"><!-- <img alt="Care Planning" src="images/planning_icon.png" /> --></div>
+                    <input tabindex="0" type="radio" name="pathSelect" value="planning" /><span>Care Planning</span>
+                  </label>
+                  <label>
+                    <div class="icon patient"><!-- <img alt="Patient" src="images/patient_icon.png" /> --></div>
+                    <input tabindex="0" type="radio" name="pathSelect" value="patient" /><span>Patient</span>
+                  </label>
+                  <button type="button" tabindex="0" id="path-select" class="link do-path-start dark-hover">Next</button>
+                </fieldset>
+              </form>
+            </div><!-- .inner -->
+          </div><!-- .container -->
+        </div><!-- #start -->
+<!-- Match tip progression to scene progression through all paths below -->
+        <div id="path_01" class="inactive">
+          <div class="computer">
+            <div class="container">
+              <div class="tips">
+                <div id="tip_p01s01-1" class="tip inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">Healthwise for Care Coordination seamlessly integrates Healthwise education resources into Salesforce Health Cloud.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s01-1 -->
+                <div id="tip_p01s01-2" class="tip left-arrow inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">To access educational material, open the Healthwise tab.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s01-2 -->
+                <div id="tip_p01s02" class="tip left-arrow high inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Begin typing your search term into the search bar. Suggested topics will appear for easy navigation.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s02 -->
+                <div id="tip_p01s03-1" class="tip right-arrow small inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Search results display relevant resources to use with your patient, including reference sheets, articles, and videos.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s03-1 -->
+                <div id="tip_p01s03-2" class="tip top-arrow inactive animated fadeInUp">
+                  <div class="inner">
+                    <div class="text">Choose between English or Spanish.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s03-2 -->
+                <div id="tip_p01s03-3" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Easily see what materials have already been shared with the patient and when.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s03-3 -->
+                <div id="tip_p01s04" class="tip inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Use the resources as a reference during an interaction with your patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s04 -->
+                <div id="tip_p01s05-1" class="tip left-arrow inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Or preview the content before sending to your patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s05-1 -->
+                <div id="tip_p01s05-2" class="tip top-arrow inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Click the "Add" button to select the resource to share.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s05-2 -->
+                <div id="tip_p01s05-3" class="tip top-arrow inactive animated fadeInUp">
+                  <div class="inner">
+                    <div class="text">Once you have gathered all needed materials, click the "Share Materials" button to send to the patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s05-3 -->
+                <div id="tip_p01s06-1" class="tip top-arrow inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">View the list of materials that will be sent to the patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s06-1 -->
+                <div id="tip_p01s06-2" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Add a personal message.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s06-2 -->
+                <div id="tip_p01s06-3" class="tip bottom-arrow inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">Then click "Share" to send to your patient's secure message center or to Salesforce Community Cloud.</div>
+                    <button type="button" tabindex="0" class="link">Finish</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p01s06-3 -->
+              </div><!-- .tips -->
+              <div class="screens">
+                <div id="anim_p01s01" class="section animation inactive"></div>
+                <div id="anim_p01s02" class="section animation inactive"></div>
+                <div id="anim_p01s03-1" class="section animation inactive"></div>
+                <div id="anim_p01s03-2" class="section animation inactive"></div>
+                <div id="anim_p01s03-3" class="section animation inactive"></div>
+                <div id="anim_p01s04" class="section image inactive"><img alt="" src="images/p01s04.jpg" /></div>
+                <div id="anim_p01s05-1" class="section animation inactive"></div>
+                <div id="anim_p01s05-2" class="section animation inactive"></div>
+                <div id="anim_p01s05-3" class="section animation inactive"></div>
+                <div id="anim_p01s06-1" class="section animation inactive"></div>
+                <div id="anim_p01s06-2" class="section animation inactive"></div>
+                <div id="anim_p01s06-3" class="section animation inactive"></div>
+              </div><!-- .screens -->
+            </div><!-- .container -->
+          </div><!-- .computer -->
+
+          <div class="information">
+            <div class="inner">
+              <div id="path_01_title" class="path-title">
+                <span><strong>Healthwise for Care Coordination for Salesforce:</strong> Accessing Health Education Experience</span>
+              </div><!-- #path_01_title -->
+                <!-- Adjust all of this above and below to match the new path animation -->
+              <div id="path_01_progress" class="progression">
+                <div class="inner">
+                  <span class="number one active"><button tabindex="0" class="inner">1</button></span>
+                  <span class="number two inactive"><button tabindex="0" class="inner">2</button></span>
+                  <span class="number three inactive"><button tabindex="0" class="inner">3</button></span>
+                  <span class="number four inactive"><button tabindex="0" class="inner">4</button></span>
+                  <span class="number five inactive"><button tabindex="0" class="inner">5</button></span>
+                  <span class="number six inactive"><button tabindex="0" class="inner">6</button></span>
+                </div><!-- .inner -->
+              </div><!-- #path_01_progress -->
+            </div><!-- .inner -->
+          </div><!-- .information -->
+        </div><!-- #path_01 -->
+
+        <div id="path_02" class="inactive">
+          <div class="computer">
+            <div class="container">
+              <div class="tips">
+                <div id="tip_p02s01-1" class="tip inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Healthwise health education easily maps to your care plans.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s01-1 -->
+                <div id="tip_p02s01-2" class="tip top-arrow inactive animated fadeInUp">
+                  <div class="inner">
+                    <div class="text">Click on the "Care Plan" tab to view the patient's care plan.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                    <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s01-2 -->                  
+                <div id="tip_p02s02-1" class="tip right-arrow small inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">From the Care Plan screen, access the Problem, Goal and Task you want to work on with the patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s02-1 -->
+                <div id="tip_p02s02-2" class="tip right-arrow small inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">From the Care Plan screen, access the Problem, Goal and Task you want to work on with the patient.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s02-2 -->        
+                <div id="tip_p02s02-3" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Edit the task associated with this step in the care plan to assign patient education.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s02-2 -->
+                <div id="tip_p02s03" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Select Patient Engagement from the "Type" menu to view related health education. Click "Save".</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s03 -->
+                <div id="tip_p02s04-1" class="tip high left-arrow small inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">The Healthwise tab will automatically open.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-1 -->
+                <div id="tip_p02s04-2" class="tip high right-arrow small inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">The selected problem from the Care Plan screen populates as the search term...</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-2 -->    
+                <div id="tip_p02s04-3" class="tip right-arrow small inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">...producing a list of relevant content for that step in the care plan.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-3 -->    
+                <div id="tip_p02s04-4" class="tip left-arrow inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Items identified by your organization as the best materials to use for this care plan are flagged.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-4 --> 
+                <div id="tip_p02s04-5" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Sidebar filtering lets you narrow search results to just those items associated with the care plan.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-5 -->   
+                <div id="tip_p02s04-6" class="tip top-arrow inactive animated fadeInUp">
+                  <div class="inner">
+                    <div class="text">Select the materials you want to share...</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-6 -->
+                <div id="tip_p02s04-7" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">...and click "Share Materials".</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s04-7 -->
+                <div id="tip_p02s05-1" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">The selected materials are automatically associated back to the Problem, Goal and Task for that care plan.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s05-1 -->
+                <div id="tip_p02s05-2" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Set a due date for when you would like the patient to complete the task.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s05-2 -->
+                <div id="tip_p02s05-3" class="tip right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Add a personal note.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s05-3 -->
+                <div id="tip_p02s05-4" class="tip right-arrow low inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">Then, click "Share" to send the message and attached materials to the patient's secure message center or to Salesforce Community Cloud.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s06 -->
+                <div id="tip_p02s06" class="tip inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Dashboards provide insight into how patients are engaging with Healthwise health education and how care coordinators are using the materials.</div>
+                    <button type="button" tabindex="0" class="link">Finish</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p02s06 -->                    
+              </div><!-- .tips -->
+              <div class="screens">
+          <div id="anim_p02s01-1" class="section animation inactive"></div>
+                <div id="anim_p02s01-2" class="section animation inactive"></div>
+                <div id="anim_p02s02-1" class="section animation inactive"></div>
+                <div id="anim_p02s02-2" class="section animation inactive"></div>
+                <div id="anim_p02s02-3" class="section animation inactive"></div>
+                <div id="anim_p02s03" class="section animation inactive"></div>
+                <div id="anim_p02s04-0" class="section animation inactive"></div>
+                <div id="anim_p02s04-1" class="section animation inactive"></div>
+                <div id="anim_p02s04-2" class="section animation inactive"></div>
+                <div id="anim_p02s04-6" class="section animation inactive"></div>
+                <div id="anim_p02s04-7" class="section animation inactive"></div>
+                <div id="anim_p02s05-1" class="section animation inactive"></div>
+                <div id="anim_p02s05-2" class="section animation inactive"></div>
+                <div id="anim_p02s05-3" class="section animation inactive"></div>
+                <div id="anim_p02s05-4" class="section animation inactive"></div>
+                <div id="anim_p02s06" class="section image inactive"><img alt="" src="images/p02s06.jpg" /></div> 
+              </div><!-- .screens -->
+            </div><!-- .container -->
+          </div><!-- .computer -->
+
+          <div class="information">
+            <div class="inner">
+              <div id="path_02_title" class="path-title">
+                <span><strong>Healthwise for Care Coordination for Salesforce:</strong> Care Planning Experience</span>
+              </div><!-- #path_02_title -->
+              <div id="path_02_progress" class="progression">
+                <div class="inner">
+                  <span class="number one active"><button tabindex="0" class="inner">1</button></span>
+                  <span class="number two inactive"><button tabindex="0" class="inner">2</button></span>
+                  <span class="number three inactive"><button tabindex="0" class="inner">3</button></span>
+                  <span class="number four inactive"><button tabindex="0" class="inner">4</button></span>
+                  <span class="number five inactive"><button tabindex="0" class="inner">5</button></span>
+                  <span class="number six inactive"><button tabindex="0" class="inner">6</button></span>    
+                </div><!-- .inner -->
+              </div><!-- #path_02_progress -->
+            </div><!-- .inner -->
+          </div><!-- .information -->
+        </div><!-- #path_02 -->
+
+        <div id="path_03" class="inactive">
+          
+          <div class="computer">
+            <div class="container">
+              
+              <div class="tips">
+                
+                <div id="tip_p03s01" class="tip left-arrow small low inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Patients receive an email when care coordinators share health education materials with them. Let’s use Carol as an example. From the email, Carol is prompted to log into her Salesforce Community to access the materials and interact with her care team.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s01 -->
+                
+                <div id="tip_p03s02" class="tip left-arrow inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">After logging in, Carol can access patient education resources from the Healthwise Inbox.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s02 -->
+                
+                <div id="tip_p03s03" class="tip top-arrow inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">Carol can see the notes sent to her by her care team and access the education.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s03 -->
+                
+                <div id="tip_p03s04" class="tip low inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Carol can read important information about her health.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s04 -->
+
+                <div id="tip_p03s05" class="tip inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">She can also watch short, engaging videos.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s05 -->
+
+                <div id="tip_p03s06" class="tip left-arrow low inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">From the Healthwise Inbox, Carol can respond back to her care team.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s06 -->
+
+                <div id="tip_p03s07-1" class="tip left-arrow low inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">Back in Salesforce Health Cloud, Carol’s comments and questions are captured in the Collaboration tab within Health Cloud. Everyone on the care team can see what resources were shared along with her feedback.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s07-1 -->
+
+                <div id="tip_p03s07-2" class="tip left-arrow low inactive animated fadeInRight">
+                  <div class="inner">
+                    <div class="text">From the Care Coodinator view, Carol’s comments and questions are captured in the Collaboration tab within Health Cloud. Everyone on the care team can see what resources were shared along with her feedback.</div>
+                    <button type="button" tabindex="0" class="link">Next</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s07-2 -->
+                
+                <div id="tip_p03s07-3" class="tip small right-arrow inactive animated fadeInLeft">
+                  <div class="inner">
+                    <div class="text">The Healthwise Task History tab shows when materials were shared with Carol and when she accessed them.</div>
+                    <button type="button" tabindex="0" class="link">Finish</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button>
+                    </div><!-- .bottom -->
+                  </div><!-- .inner -->
+                </div><!-- #tip_p03s07-3 -->
+           <!--
+                <div id="tip_p03s07-4" class="tip right-arrow inactive animated fadeInDown">
+                  <div class="inner">
+                    <div class="text">The Healthwise Task History tab shows when materials were shared with Carol and when she accessed them.</div>
+                    <button type="button" tabindex="0" class="link">Finish</button>
+                    <div class="bottom">
+                      <button type="button" tabindex="0" class="prev">&lt; Previous</button> -->
+                  <!--  </div><!-- .bottom -->
+                <!--  </div><!-- .inner -->
+               <!-- </div><!-- #tip_p03s07-4 -->  
+
+              </div><!-- .tips -->
+              
+              <div class="screens">
+                <div id="anim_p03s01" class="section image inactive"><img alt="" src="images/p03s01.jpg" /></div>
+                <div id="anim_p03s02" class="section image inactive"><img alt="" src="images/p03s02.jpg" /></div>
+                <div id="anim_p03s03" class="section image inactive"><img alt="" src="images/p03s03.jpg" /></div>
+                <div id="anim_p03s04" class="section image inactive"><img alt="" src="images/p03s04.jpg" /></div>
+                <div id="anim_p03s05" class="section image inactive"><img alt="" src="images/p03s05.jpg" /></div>
+                <div id="anim_p03s06" class="section image inactive"><img alt="" src="images/p03s06.jpg" /></div>
+                <div id="anim_p03s07-1" class="section animation inactive"></div>
+                <div id="anim_p03s07-2" class="section animation inactive"></div>
+                <div id="anim_p03s07-3" class="section animation inactive"></div>
+                <div id="anim_p03s07-4" class="section animation inactive"></div>
+                      
+              </div><!-- .screens -->
+
+            </div><!-- .container -->
+          </div><!-- .computer -->
+
+          <div class="information">
+            <div class="inner">
+              <div id="path_03_title" class="path-title">
+                <span><strong>Healthwise for Care Coordination for Salesforce:</strong> Patient Experience</span>
+              </div><!-- #path_02_title -->
+              <div id="path_03_progress" class="progression">
+                <div class="inner">
+                  <span class="number one active"><button tabindex="0" class="inner">1</button></span>
+                  <span class="number two inactive"><button tabindex="0" class="inner">2</button></span>
+                  <span class="number three inactive"><button tabindex="0" class="inner">3</button></span>
+                  <span class="number four inactive"><button tabindex="0" class="inner">4</button></span>
+                  <span class="number five inactive"><button tabindex="0" class="inner">5</button></span>
+                  <span class="number six inactive"><button tabindex="0" class="inner">6</button></span>
+                  <span class="number seven inactive"><button tabindex="0" class="inner">7</button></span>
+                </div><!-- .inner -->
+              </div><!-- #path_03_progress -->
+            </div><!-- .inner -->
+          </div><!-- .information -->
+        
+        </div><!-- #path_03 -->
+
+
+        <div id="end" class="inactive">
+          <div class="container">
+            <div class="info col-xs-5">
+              <div class="inner">
+                <div class="title">Find out more about Healthwise for Care Coordination.</div>
+                <a class="link dark-hover" href="#">Request a Live Demo</a>
+                <!-- class below this needs to be updated to link to home page of tour 2 -->
+                <a class="explore care-team active" href="/">Explore More Experiences ></a>
+              </div><!-- .inner -->
+            </div><!-- info -->
+            <div class="spacer col-xs-1"></div>
+            <div class="image col-xs-6">
+              <img alt="Thank you" src="images/iPad-Pro-Mockup.png" />
+            </div><!-- .image -->
+          </div><!-- .container -->
+        </div><!-- #end -->
+
+        <div id="footer">
+          <img alt="footer" src="images/footer-placeholder.jpg" />
+        </div><!-- #footer -->
+
+      </div><!-- #main -->
+    </div><!-- #tour-wrapper -->
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/bodymovin.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+  </body>
+</html>

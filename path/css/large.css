@@ -1,0 +1,1449 @@
+/* ========= */
+/* = Fonts = */
+/* ========= */
+
+@font-face {
+	font-family: 'Museo Sans Rounded 100';
+	src: url('../fonts/MuseoSansRounded-100.eot');
+	src: url('../fonts/MuseoSansRounded-100.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansRounded-100.woff') format('woff'),
+		url('../fonts/MuseoSansRounded-100.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans Rounded 500';
+	src: url('../fonts/MuseoSansRounded-500.eot');
+	src: url('../fonts/MuseoSansRounded-500.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansRounded-500.woff') format('woff'),
+		url('../fonts/MuseoSansRounded-500.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans Rounded 700';
+	src: url('../fonts/MuseoSansRounded-700.eot');
+	src: url('../fonts/MuseoSansRounded-700.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansRounded-700.woff') format('woff'),
+		url('../fonts/MuseoSansRounded-700.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Museo Sans Rounded 300';
+	src: url('../fonts/MuseoSansRounded-300.eot');
+	src: url('../fonts/MuseoSansRounded-300.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansRounded-300.woff') format('woff'),
+		url('../fonts/MuseoSansRounded-300.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* =========== */
+/* = General = */
+/* =========== */
+
+a:focus,
+button:focus {
+	outline: none !important;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+image, svg, img {
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+#tour-wrapper {
+  overflow: hidden;
+}
+
+#end.active,
+#start.active,
+#path_01.active,
+#path_02.active {
+  display: block;
+}
+
+#end.inactive,
+#start.inactive,
+#path_01.inactive,
+#path_02.inactive,
+#path_03.inactive {
+  display: none;
+}
+
+.tip.animated {
+	-webkit-transition-delay: 10s !important;
+  transition-delay: 10s !important;
+}
+
+.tip.active,
+.image.active,
+.animation.active {
+  display: block;
+}
+
+.tip.inactive,
+.image.inactive,
+.animation.inactive {
+  display: none;
+}
+
+.link {
+  color: #fff;
+  background: #FA5048;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  display: block;
+  width: 120px;
+  margin-top: 20px;
+  border: none;
+}
+
+.link:hover,
+.link:focus {
+  color: #FA5048;
+  background: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tip {
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.tip .inner {
+  background: #003A47;
+  padding: 20px;
+  max-width: 250px;
+	float: left;
+}
+
+.tip.top-arrow {
+  padding-top: 20px;
+  background-image: url('../images/tip-arrow-top.svg');
+  background-size: auto 21px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.tip.left-arrow {
+  padding-left: 20px;
+  background-image: url('../images/tip-arrow-left.svg');
+  background-size: 21px auto;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.tip.left-arrow.high {
+  background-position: left 10%;
+}
+
+.tip.left-arrow.middle {
+  background-position: left center;
+}
+
+.tip.left-arrow.low {
+  background-position: left 85%;
+}
+
+.tip.right-arrow {
+  padding-right: 20px;
+  background-image: url('../images/tip-arrow-right.svg');
+  background-size: 21px auto;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.tip.right-arrow.high {
+  background-position: right 10%;
+}
+
+.tip.right-arrow.middle {
+  background-position: right center;
+}
+
+.tip.right-arrow.low {
+  background-position: right 85%;
+}
+
+.tip.bottom-arrow {
+  padding-bottom: 20px;
+  background-image: url('../images/tip-arrow-down.svg');
+  background-size: auto 21px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.tip .bottom {
+	margin-top: 30px;
+	float: left;
+	padding-top: 10px;
+	border-top: 1px solid #fff;
+	width: 100%;
+}
+
+.tip .bottom .prev {
+    float: left;
+    color: #fff;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.tip .bottom .prev:hover,
+.tip .bottom .prev:focus {
+	text-decoration: underline;
+}
+
+.tip .bottom .count {
+	float: right;
+}
+
+.explore.patient.active,
+.explore.care-team.active {
+	display: block;
+}
+
+.explore.patient.inactive,
+.explore.care-team.inactive {
+	display: none !important;
+}
+
+/* ========== */
+/* = Header = */
+/* ========== */
+
+#header img {
+	width: 100%;
+}
+
+/* ========= */
+/* = Start = */
+/* ========= */
+
+#start .inner {
+  width: 65%;
+  padding: 40px 0 80px;
+  text-align: center;
+  margin: auto;
+}
+
+#start .inner .title {
+  color: #003A47;
+  line-height: 100%;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+#start .inner .link {
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+#start .inner .link:hover,
+#start .inner .link:focus {
+  color: #fff;
+  background: #003A47;
+}
+
+#start .inner label {
+  float: left;
+  width: 245px;
+  max-width: 100%;
+  margin: 60px 0 40px;
+}
+
+#start .inner label:hover {
+  cursor: pointer;
+}
+
+#start .inner label .icon img {
+  width: 150px;
+}
+
+#start .inner label input[type=radio] {
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+
+#start .inner label input[type=radio]+ span {
+	border-bottom: 2px solid #fff;
+}
+
+#start .inner label input[type=radio]:focus + span {
+	border-bottom: 2px solid #000;
+}
+
+#start .inner label span {
+  min-height: 20px;
+  display: inline-block;
+  background-image: url('../images/radio-button.svg');
+  background-position: 50% 35px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 0;
+  padding-top: 60px;
+  color: #003A47;
+  font-size: 27px;
+  font-weight: 300;
+}
+
+#start .inner label input[type=radio]:checked+span {
+  min-height: 20px;
+  display: inline-block;
+  background-image: url('../images/radio-button-checked.svg');
+  background-position: 50% 35px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 0;
+  padding-top: 60px;
+}
+
+/* =========== */
+/* = Path 01 = */
+/* =========== */
+
+.computer {
+/*   background-image: url('../images/MacBook-Silver.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+	background-size: 1050px;
+  padding: 80px 0;
+  margin: 40px 0; */
+  
+      background-image: url(../images/MacBook-Silver.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1380px;
+    /* padding: 180px 0; */
+    /* margin: 40px 0; */
+    padding-top: 180px;
+    padding-bottom: 180px;
+    padding-left: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -30px;
+	
+	
+
+}
+
+.computer .animation {
+  height: 509px;
+	width: 905px;
+	left: -1px;
+  margin-top: -40px;
+	margin-left: auto;
+	margin-right: auto;
+  position: relative;
+}
+
+.computer .image {
+	height: 509px;
+	width: 905px;
+  margin-top: -40px;
+	margin-left: auto;
+	margin-right: auto;
+  position: relative;
+}
+
+.computer .image img {
+  width: 1674px;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  transform-origin: 108px 15px 0px;
+  backface-visibility: visible;
+  transform-style: flat;
+  overflow: hidden;
+  transform: matrix3d(0.471296, 0, 0, 0, 0, 0.471296, 0, 0, 0, 0, 1, 0, 0.0555556, 0, 0, 1);
+  
+}
+
+.computer .container {
+  padding: 0;
+  position: relative;
+}
+
+/* Section 01 */
+
+#tip_p01s01-1 {
+	left: 700px;
+	bottom: 95px;
+}
+
+#tip_p01s01-2 {
+	left: 360px;
+    bottom: 190px;
+}
+
+/* Section 02 */
+
+#tip_p01s02 {
+    left: 689px;
+    bottom: 210px;
+}
+
+/* Section 03  this one for large*/
+
+#tip_p01s03-1 {
+    left: 130px;
+    bottom: 98px;
+}
+
+#tip_p01s03-2 {
+    left: 653px;
+    bottom: 100px;
+}
+
+#tip_p01s03-3 {
+	left: 535px;
+    bottom: 225px;
+}
+
+/* Section 04 */
+
+#tip_p01s04 {
+	left: 700px;
+	bottom: 120px;
+}
+
+/* Section 05 */
+
+#tip_p01s05-1 {
+	left: 725px;
+	bottom: 120px;
+}
+
+#tip_p01s05-2 {
+	left: 740px;
+    bottom: 105px;
+}
+
+#tip_p01s05-3 {
+	left: 740px;
+    bottom: 75px;
+}
+
+/* Section 06 */
+
+#tip_p01s06-1 {
+    left: 650px;
+    bottom: 55px;
+}
+
+#tip_p01s06-2 {
+    left: 242px;
+    bottom: 35px;
+}
+
+#tip_p01s06-3 {
+	left: 750px;
+	bottom: 120px;
+}
+
+/* =========== */
+/* = Path 02 = */
+/* =========== */
+
+.tablet {
+  background-image: url('../images/ipad.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+	background-size: 850px;
+  padding: 80px 0;
+  margin: 18px 0;
+}
+
+.tablet .animation {
+	height: 552px;
+	width: 718px;
+  margin-top: -32px;
+	margin-left: auto;
+	margin-right: auto;
+  position: relative;
+}
+
+.tablet .image {
+	height: 552px;
+	width: 718px;
+  margin-top: -32px;
+	margin-left: auto;
+	margin-right: auto;
+  position: relative;
+}
+
+.tablet .image img {
+  width: 936px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transform-origin: 0px 32px 0px;
+  backface-visibility: visible;
+  transform-style: flat;
+  overflow: hidden;
+  transform: matrix3d(0.766667, 0, 0, 0, 0, 0.766667, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
+}
+
+.tablet .container {
+  padding: 0;
+  position: relative;
+}
+
+/* Section 01 */
+
+#tip_p02s01-1 {
+	left: 700px;
+	bottom: 120px;
+}
+
+#tip_p02s01-2 {
+	left: 435px;
+	bottom: 200px;
+}
+
+/* Section 02 */
+
+#tip_p02s02-1 {
+	left: 125px;
+	bottom: 60px;
+}
+
+#tip_p02s02-2 {
+	left: 600px;
+	bottom: 40px;
+}
+
+/* Section 03 */
+
+#tip_p02s03 {
+	left: 430px;
+	bottom: 75px;
+}
+
+/* Section 04 */
+
+#tip_p02s04-1 {
+	left: 745px;
+	bottom: 345px;
+}
+
+#tip_p02s04-2 {
+	left: 132px;
+	bottom: 298px;
+}
+
+#tip_p02s04-3 {
+	left: 135px;
+	bottom: 100px;
+}
+
+#tip_p02s04-4 {
+	left: 680px;
+	bottom: 160px;
+}
+
+#tip_p02s04-5 {
+	left: 615px;
+	bottom: 165px;
+}
+
+#tip_p02s04-6 {
+	left: 282px;
+	bottom: 45px;
+}
+
+#tip_p02s04-7 {
+	left: 580px;
+	bottom: 325px;
+}
+
+/* Section 05 */
+
+#tip_p02s05-1 {
+	left: 180px;
+	bottom: 140px;
+}
+
+#tip_p02s05-2 {
+	left: 180px;
+	bottom: 75px;
+}
+
+#tip_p02s05-3 {
+	left: 265px;
+	bottom: 45px;
+}
+
+#tip_p02s05-4 {
+	left: 530px;
+	bottom: 50px;
+}
+
+/* Section 06 */
+
+#tip_p02s06 {
+	left: 820px;
+	bottom: 30px;
+}
+
+/* =========== */
+/* = Path 03 = */
+/* =========== */
+
+/* Section 01 */
+
+#tip_p03s01 {
+    left: 770px;
+    bottom: 130px;
+}
+
+/* Section 02 */
+
+#tip_p03s02 {
+    left: 725px;
+    bottom: 55px;
+}
+
+/* Section 03 */
+
+#tip_p03s03 {
+    left: 450px;
+    bottom: 380px;
+}
+
+/* Section 04 */
+
+#tip_p03s04 {
+    left: 720px;
+    bottom: 320px;
+}
+
+/* Section 05 */
+
+#tip_p03s05 {
+    left: 650px;
+    bottom: 150px;
+}
+
+/* Section 06 */
+
+#tip_p03s06 {
+    left: 550px;
+    bottom: 45px;
+}
+
+/* Section 07 */
+
+#tip_p03s07-1 {
+    left: 700px;
+    bottom: 45px;
+}
+
+#tip_p03s07-2 {
+	left: 700px;
+	bottom: 45px;
+}
+
+#tip_p03s07-3 {
+	left: 70px;
+	bottom: 50px;
+}
+
+/*#tip_p03s07-4 {
+	left: 70px;
+	bottom: 50px;
+}*/
+
+/* ======= */
+/* = End = */
+/* ======= */
+
+#end .info .inner {
+	padding: 120px 0;
+}
+
+#end .title {
+	font-size: 38px;
+	line-height: 120%;
+	margin-bottom: 50px;
+	color: #003A47;
+}
+
+#end .link {
+	width: 215px;
+}
+
+#end .link:hover {
+	color: #fff;
+  background: #003A47;
+}
+
+#end .explore {
+	display: inline-block;
+	margin-top: 20px;
+	font-style: italic;
+	color: #003A47;
+	font-size: 16px;
+}
+
+#end .explore:hover {
+	color: #FA5048;
+}
+
+#end .image img {
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+
+
+/* ===================================== */
+/* = Back Link / Path Title / Progress = */
+/* ===================================== */
+
+#backlink {
+	padding-top: 30px;
+}
+
+#backlink a {
+	color: #000;
+	display: inline-block;
+}
+
+#backlink a:hover {
+	color: #F0524B;
+	cursor: pointer;
+}
+
+#backlink .start-over.active,
+#backlink .back-to-site.active {
+	display: block;
+}
+
+#backlink .start-over.inactive,
+#backlink .back-to-site.inactive {
+	display: none;
+}
+
+.information {
+	width: 100%;
+	float: left;
+	padding-bottom: 40px;
+	margin-top: -50px;
+}
+
+.information > .inner {
+	width: 870px;
+	margin: auto;
+}
+
+.path-title,
+.progression {
+	width: 50%;
+	float: left;
+}
+
+.path-title {
+	height: 35px;
+	position: relative;
+}
+
+.path-title span {
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.progression > .inner {
+	float: right;
+}
+
+.progression .number {
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+}
+
+.progression .number button {
+	height: 100%;
+	background: none;
+	width: 100%;
+	border: none;
+	background: #fff;
+  	color: #013B48;
+	display: block;
+	position: relative;
+	text-align: center;
+  	top: 50%;
+  	border-radius: 100%;
+	font-size: 14px;
+	line-height: 14px;
+  	transform: translateY(-50%);
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.progression .number button:hover,
+.progression .number button:focus {
+	cursor: pointer;
+	color: #fff;
+	background: #013B48;
+	text-decoration: underline;
+}
+
+.progression .number.active button {
+	color: #fff;
+	background: #FA5048;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+/* ========== */
+/* = Footer = */
+/* ========== */
+
+#footer img {
+	width: 100%;
+}
+
+/* ================= */
+/* = Media Queries = */
+/* ================= */
+
+/* = 1199 and below = */
+@media only screen and (max-width:1199px) {
+
+	/* === PATH 01 === */
+
+	/* Section 01 */
+
+	#tip_p01s01-1 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p01s01-2 {
+	left: 262px;
+	bottom: 42px;
+}
+
+/* Section 02 */
+
+#tip_p01s02 {
+	left: 300px;
+	bottom: 215px;
+}
+
+/* Section 03 */
+
+#tip_p01s03-1 {
+	left: 305px;
+	bottom: 111px;
+}
+
+#tip_p01s03-2 {
+	left: 490px;
+	bottom: 205px;
+}
+
+#tip_p01s03-3 {
+	left: 492px;
+	bottom: 280px;
+}
+
+/* Section 04 */
+
+#tip_p01s04 {
+	left: 634px;
+	bottom: 135px;
+}
+
+/* Section 05 */
+
+#tip_p01s05-1 {
+	left: 326px;
+	bottom: 20px;
+}
+
+#tip_p01s05-2 {
+	left: 326px;
+	bottom: 20px;
+}
+
+#tip_p01s05-3 {
+	left: 326px;
+	bottom: 20px;
+}
+
+/* Section 06 */
+
+#tip_p01s06-1 {
+	left: 580px;
+	bottom: 225px;
+}
+
+#tip_p01s06-2 {
+	left: 318px;
+	bottom: 28px;
+}
+
+#tip_p01s06-3 {
+	left: 318px;
+	bottom: 28px;
+}
+
+	/* === PATH 02 === */
+
+	/* Section 01 */
+
+	#tip_p02s01-1 {
+	left: 600px;
+	bottom: 80px;
+}
+
+#tip_p02s01-2 {
+	left: 600px;
+	bottom: 80px;
+}
+
+/* Section 02 */
+
+#tip_p02s02-1 {
+	left: 300px;
+	bottom: 10px;
+}
+
+#tip_p02s02-2 {
+	left: 692px;
+	bottom: 275px;
+}
+
+/* Section 03 */
+
+#tip_p02s03 {
+	left: 534px;
+	bottom: 255px;
+}
+
+/* Section 04 */
+
+#tip_p02s04-1 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-2 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-3 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-4 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-5 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-6 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-7 {
+	left: 633px;
+	bottom: 130px;
+}
+
+/* Section 05 */
+
+#tip_p02s05-1 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-2 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-3 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-4 {
+	left: 645px;
+	bottom: 230px;
+}
+
+/* Section 06 */
+
+#tip_p02s06 {
+	left: 645px;
+	bottom: 230px;
+}
+    
+    	/* === PATH 03 === */
+
+	/* Section 01 */
+
+	#tip_p03s01 {
+    left: 700px;
+    bottom: 200px;
+}
+
+/* Section 02 */
+
+#tip_p03s02 {
+    left: 645px;
+    bottom: 100px;
+}
+
+/* Section 03 */
+
+#tip_p03s03 {
+    left: 450px;
+    bottom: 450px;
+}
+
+/* Section 04 */
+
+#tip_p03s04 {
+    left: 700px;
+    bottom: 400px;
+}
+
+/* Section 05 */
+
+#tip_p03s05 {
+    left: 650px;
+    bottom: 150px;
+}
+
+/* Section 06 */
+
+#tip_p03s06 {
+    left: 500px;
+    bottom: 10px;
+}
+
+/* Section 07 */
+
+#tip_p03s07-1 {
+    left: 675px;
+    bottom: 10px;
+}
+
+#tip_p03s07-2 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p03s07-3 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p03s07-4 {
+	left: 262px;
+	bottom: 42px;
+}
+
+}
+
+/* = 993px and below = */
+@media only screen and (max-width:993px) {
+
+	.computer .animation {
+		left: 0;
+	}
+
+	.computer .image {
+		left: 0;
+	}
+
+}
+
+/* = 993px and below = */
+@media only screen and (max-width:993px) {
+
+	.computer .animation {
+		left: 0;
+	}
+
+	.computer .image {
+		left: 0;
+	}
+
+}
+
+/* = 991px and below = */
+@media only screen and (max-width:991px) {
+
+	.computer {
+		background-size: 965px;
+	  padding: 80px 0;
+	  margin: 40px 0;
+	}
+
+	.computer .animation {
+	  height: 467px;
+		width: 830px;
+		left: -41px;
+	  margin-top: -40px;
+	}
+
+	.computer .image {
+		height: 467px;
+		width: 830px;
+		left: -41px;
+	  margin-top: -40px;
+	}
+
+	.computer .image img {
+	  width: 1674px;
+	  top: 0px;
+	  left: 0px;
+	  transform-origin: 94px 15px 0px;
+	  transform: matrix3d(0.432292, 0, 0, 0, 0, 0.432292, 0, 0, 0, 0, 1, 0, 0, 0.0625, 0, 1);
+	}
+
+	.information > .inner {
+		width: 700px;
+		margin: auto;
+	}
+
+	#start .inner .title {
+		font-size: 30px;
+		line-height: 120%;
+	}
+
+	.link {
+		font-size: 16px;
+    padding: 8px;
+    width: 100px;
+	}
+
+	#start .inner label span {
+	  font-size: 20px;
+	}
+
+	.tip .inner {
+	  padding: 30px;
+	  max-width: 200px;
+	}
+
+	.progression .number {
+		width: 30px;
+		height: 30px;
+	}
+
+	.progression .number .inner {
+		font-size: 14px;
+	}
+
+	#end .title {
+		font-size: 30px;
+		line-height: 120%;
+	}
+
+	#end .link {
+		width: 215px;
+	}
+
+	#end .explore {
+		font-size: 14px;
+	}
+
+	#end .info .inner {
+    padding: 120px 0;
+	}
+
+		/* === PATH 01 === */
+
+	/* Section 01 */
+
+	#tip_p01s01-1 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p01s01-2 {
+	left: 262px;
+	bottom: 42px;
+}
+
+/* Section 02 */
+
+#tip_p01s02 {
+	left: 300px;
+	bottom: 215px;
+}
+
+/* Section 03 */
+
+#tip_p01s03-1 {
+	left: 305px;
+	bottom: 111px;
+}
+
+#tip_p01s03-2 {
+	left: 490px;
+	bottom: 205px;
+}
+
+#tip_p01s03-3 {
+	left: 492px;
+	bottom: 280px;
+}
+
+/* Section 04 */
+
+#tip_p01s04 {
+	left: 634px;
+	bottom: 135px;
+}
+
+/* Section 05 */
+
+#tip_p01s05-1 {
+	left: 326px;
+	bottom: 20px;
+}
+
+#tip_p01s05-2 {
+	left: 326px;
+	bottom: 20px;
+}
+
+#tip_p01s05-3 {
+	left: 326px;
+	bottom: 20px;
+}
+
+/* Section 06 */
+
+#tip_p01s06-1 {
+	left: 580px;
+	bottom: 225px;
+}
+
+#tip_p01s06-2 {
+	left: 318px;
+	bottom: 28px;
+}
+
+#tip_p01s06-3 {
+	left: 318px;
+	bottom: 28px;
+}
+
+	/* === PATH 02 === */
+
+	/* Section 01 */
+
+	#tip_p02s01-1 {
+	left: 600px;
+	bottom: 80px;
+}
+
+#tip_p02s01-2 {
+	left: 600px;
+	bottom: 80px;
+}
+
+/* Section 02 */
+
+#tip_p02s02-1 {
+	left: 300px;
+	bottom: 10px;
+}
+
+#tip_p02s02-2 {
+	left: 692px;
+	bottom: 275px;
+}
+
+/* Section 03 */
+
+#tip_p02s03 {
+	left: 534px;
+	bottom: 255px;
+}
+
+/* Section 04 */
+
+#tip_p02s04-1 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-2 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-3 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-4 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-5 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-6 {
+	left: 633px;
+	bottom: 130px;
+}
+
+#tip_p02s04-7 {
+	left: 633px;
+	bottom: 130px;
+}
+
+/* Section 05 */
+
+#tip_p02s05-1 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-2 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-3 {
+	left: 645px;
+	bottom: 230px;
+}
+
+#tip_p02s05-4 {
+	left: 645px;
+	bottom: 230px;
+}
+
+/* Section 06 */
+
+#tip_p02s06 {
+	left: 645px;
+	bottom: 230px;
+}
+    
+    	/* === PATH 03 === */
+
+	/* Section 01 */
+
+	#tip_p03s01 {
+    left: 700px;
+    bottom: 200px;
+}
+
+/* Section 02 */
+
+#tip_p03s02 {
+    left: 645px;
+    bottom: 100px;
+}
+
+/* Section 03 */
+
+#tip_p03s03 {
+    left: 450px;
+    bottom: 450px;
+}
+
+/* Section 04 */
+
+#tip_p03s04 {
+    left: 700px;
+    bottom: 400px;
+}
+
+/* Section 05 */
+
+#tip_p03s05 {
+    left: 650px;
+    bottom: 150px;
+}
+
+/* Section 06 */
+
+#tip_p03s06 {
+    left: 500px;
+    bottom: 10px;
+}
+
+/* Section 07 */
+
+#tip_p03s07-1 {
+    left: 675px;
+    bottom: 10px;
+}
+
+#tip_p03s07-2 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p03s07-3 {
+	left: 262px;
+	bottom: 42px;
+}
+
+#tip_p03s07-4 {
+	left: 262px;
+	bottom: 42px;
+}
+
+}
+
+/* = 768px and below = */
+@media only screen and (max-width:768px) {
+
+	#start,
+	#path_01,
+	#path_02 {
+		display: none !important;
+	}
+
+}
