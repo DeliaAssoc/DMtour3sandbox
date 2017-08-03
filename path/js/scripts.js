@@ -80,7 +80,7 @@ $(document).ready(function() {
   $(document).on('click', '.do-path-start', function() {
     var path = $('input[name=pathSelect]:checked').val();
     //If Education Path is selected
-    if (path == 'education') {
+    if (path == 'care-team') {
       //PATH 01
       //SECTION 01
       //Deactivate Start screen
@@ -98,7 +98,7 @@ $(document).ready(function() {
       // Actvate, deactivate End CTAs
      // $('.explore.care-team').toggleClass('inactive active');
     }
-    else if (path == 'planning') { 
+    else if (path == 'care-plan') { 
   
     //If Planning Path is selected
       //PATH 02
