@@ -12,7 +12,6 @@ var anim_p1_s1_2,
     anim_p2_s1_1,
     anim_p2_s1_2,
     anim_p2_s1_3,
-    anim_p2_s1_4,
     anim_p2_s4,
     anim_p3_s1,
     anim_p3_s3_1,
@@ -35,7 +34,6 @@ function init_anim(selector, data) {
   bodymovin.destroy( anim_p2_s1_1 );
   bodymovin.destroy( anim_p2_s1_2 );
   bodymovin.destroy( anim_p2_s1_3 );
-  bodymovin.destroy( anim_p2_s1_4 );
   bodymovin.destroy( anim_p3_s1 );
   bodymovin.destroy( anim_p3_s3_1 );
   bodymovin.destroy( anim_p3_s3_2 );  
@@ -101,12 +99,8 @@ $(document).ready(function() {
       //Activate Path 02
       $('#path_02').toggleClass('inactive active');
 
-      // Trigger animation
-      anim_p2_s1_1 = init_anim('anim_p02s01-1', '../bodymovin/p02s01/data.json');
-
-      //Activate animation and tooltip
-      setTimeout( function() { $('#tip_p02s01-1').toggleClass('inactive active'); }, 1100);
-      $('#anim_p02s01-1').toggleClass('inactive active');
+      // Call animation
+      anim_p02s1_1();
 
       // Actvate, deactivate backlinks
       $('#backlink .start-over').toggleClass('inactive active');
@@ -127,9 +121,9 @@ $(document).ready(function() {
       //Activate Path 03
       $('#path_03').toggleClass('inactive active');
 
-      //Activate animation and tooltip
-      setTimeout( function() { $('#tip_p03s01').toggleClass('inactive active'); }, 1100);
-      $('#anim_p03s01').toggleClass('inactive active');
+      // Call animation and tooltip
+      anim_p03_1();
+
       // Actvate, deactivate backlinks
       $('#backlink .start-over').toggleClass('inactive active');
       $('#backlink .back-to-site').toggleClass('active inactive');
@@ -162,7 +156,7 @@ function anim_p01s01_1()
   setTimeout( function() {
     $('#tip_p01s01-1').toggleClass('inactive active');
   }, 750 );
-}
+};
 
 function anim_p01s01_2()
 {
@@ -186,7 +180,7 @@ function anim_p01s01_2()
       anim_p1_s1_2.goToAndStop( 100, true );
     });
   }, 1250);
-}
+};
 
 
 function anim_p01s01_3()
@@ -206,7 +200,7 @@ function anim_p01s01_3()
       anim_p1_s1_3.goToAndStop( 50, true );
     });
   }, 1250 );
-}
+};
 
 
 
@@ -241,7 +235,7 @@ function anim_p01s02_2()
 
   // Trigger animation
   // No animation for this tooltip
-}
+};
 
 
 function anim_p01s02_3()
@@ -252,7 +246,7 @@ function anim_p01s02_3()
   // Trigger animation
   // Stop animation if still running
   anim_p1_s2.stop();
-}
+};
 
 
 function anim_p01s02_4()
@@ -268,7 +262,7 @@ function anim_p01s02_4()
       anim_p1_s2.goToAndStop( 280, true );
     });
   }, 1250 );
-}
+};
 
 
 function anim_p01s02_5()
@@ -285,7 +279,7 @@ function anim_p01s02_5()
   anim_p1_s2 = init_anim( 'anim_p01s02', '../bodymovin/p01s02/data.json' );
   // Stop animation if still running
   anim_p1_s2.stop();
-}
+};
 
 
 
@@ -299,7 +293,7 @@ function anim_p01s03()
 
   // Trigger animation
   // No animation for this tooltip
-}
+};
 
 
 
@@ -325,7 +319,7 @@ function anim_p01s04_1( prev )
     anim_p1_s4.play();
     anim_p1_s4.goToAndStop(1, true);
   }, false);
-}
+};
 
 
 function anim_p01s04_2()
@@ -346,7 +340,7 @@ function anim_p01s04_2()
   anim_p1_s4.addEventListener( 'loopComplete', function(){
     anim_p1_s4.goToAndStop( 165, true );
   });
-}
+};
 
 
 
@@ -365,7 +359,7 @@ function anim_p01s05_1( prev )
 
   // Trigger animation
   // No animation for this tooltip
-}
+};
 
 
 function anim_p01s05_2()
@@ -379,7 +373,7 @@ function anim_p01s05_2()
 
   // Trigger animation
   // No animation for this tooltip
-}
+};
 
 
 
@@ -405,7 +399,7 @@ function anim_p01s06_1( prev )
     anim_p1_s6.play();
     anim_p1_s6.goToAndStop(1, true);
   }, false);
-}
+};
 
 
 function anim_p01s06_2()
@@ -415,7 +409,7 @@ function anim_p01s06_2()
 
   // Trigger animation
   // No animation for this tooltip
-}
+};
 
 
 function anim_p01s06_3()
@@ -425,7 +419,7 @@ function anim_p01s06_3()
 
   // Trigger animation
   anim_p1_s6.stop(); // Reset animation for Previous button click
-}
+};
 
 
 function anim_p01s06_4()
@@ -438,8 +432,100 @@ function anim_p01s06_4()
   anim_p1_s6.addEventListener('loopComplete', function() {
     anim_p1_s6.goToAndStop(100, true);
   }, false);
+};
+
+
+
+//////////  PATH 02  //////////
+// Slide 1
+
+function anim_p02s1_1()
+{
+  // Trigger animation
+  anim_p2_s1_1 = init_anim('anim_p02s01-1' , '../bodymovin/p02s01/data.json');
+
+  //Activate animation and tooltip
+  // Start animation and pause on frame 1
+  anim_p2_s1_1.addEventListener('data_ready', function() {
+    anim_p2_s1_1.play();
+    anim_p2_s1_1.goToAndStop(1, true);
+  }, false);
+
+  setTimeout( function() { $('#tip_p02s01-1').toggleClass('inactive active'); }, 750);
+  $('#anim_p02s01-1').toggleClass('inactive active');
+};
+
+
+function anim_p02s1_2()
+{
+  //Activate animation and tooltip
+  setTimeout( function() { anim_p2_s1_1.play() }, 1000 );
+  anim_p2_s1_1.addEventListener( 'loopComplete', function() {
+    anim_p2_s1_1.goToAndStop( 70, true );
+  });
+  setTimeout( function() { $( '#tip_p02s01-2' ).toggleClass( 'inactive active' ); }, 750);
+};
+
+
+function anim_p02s1_3()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p02s01-2' ).toggleClass( 'inactive active' );
+   setTimeout( function() {$('#tip_p02s01-3').toggleClass('inactive active'); }, 750 );
+
+  // Trigger animation
+  anim_p2_s1_2 = init_anim('anim_p02s01-2', '../bodymovin/p02s02/data.json');
+
+  setTimeout( function() { anim_p2_s1_2.play(); }, 1250);
+  anim_p2_s1_2.addEventListener('loopComplete', function() {
+    anim_p2_s1_2.goToAndStop(50, true);
+  }, false);
 }
 
+
+function anim_p02s1_4()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p02s01-3' ).toggleClass( 'inactive active' );
+   setTimeout( function() {$('#tip_p02s01-4').toggleClass('inactive active'); }, 750 );
+
+  // Trigger animation
+  anim_p2_s1_3 = init_anim('anim_p02s01-3', '../bodymovin/p02s03/data.json');
+
+  setTimeout( function() { anim_p2_s1_3.play(); }, 1500);
+  anim_p2_s1_3.addEventListener('loopComplete', function() {
+    anim_p2_s1_3.goToAndStop(50, true);
+  }, false);
+}
+
+
+
+//////////  PATH 03  //////////
+// Slide 1
+
+function anim_p03_1()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p03s01' ).toggleClass( 'inactive active' );
+  setTimeout( function() { $( '#tip_p03s01' ).toggleClass( 'inactive active' ); }, 750 );
+
+  // Trigger animation
+  anim_p3_s3_1 = init_anim( 'anim_p03s01', '../bodymovin/p03s01/data.json' );
+
+  // Play animation and pause on frame 1
+  anim_p3_s3_1.addEventListener( 'data_ready', function()
+  { anim_p3_s3_1.play();
+    anim_p3_s3_1.goToAndStop( 1, true );
+  });
+
+  // Play animation after 1000ms
+  setTimeout( function(){
+    anim_p3_s3_1.play();
+    anim_p3_s3_1.addEventListener( 'loopComplete', function(){
+      anim_p3_s3_1.goToAndStop( 250, true );
+    });
+  }, 1500);
+}
 
 
 
@@ -695,62 +781,57 @@ function anim_p01s06_4()
 
 
   //////////////////////
-  // PATH 02 || 2 - 5 //
+  ////// PATH 02 ///////
   //////////////////////
 
   //SECTION 01
+
   //Check for "next" click
   $('#tip_p02s01-1 .link').on('click', function(){
-  //alert('2-1.1->2-1.2 no anim');
-  //Deactivate animation and tooltip
-  $('#tip_p02s01-1').toggleClass('active inactive');
-  $('#anim_p02s01-1').toggleClass('inactive active');
-  // Trigger animation
-  anim_p2_s1_2 = init_anim('anim_p02s01-2' , '../bodymovin/p02s01/data.json');
-  //Activate animation and tooltip
-  setTimeout( function() { $('#tip_p02s01-2').toggleClass('inactive active'); }, 1000);
-  $('#anim_p02s01-2').toggleClass('inactive active');
-  setTimeout( function() { anim_p2_s1_2.play(); }, 200);
-  anim_p2_s1_2.addEventListener('loopComplete', function() {
-  anim_p2_s1_2.goToAndStop(100, true);
-  }, false);
+  
+    //Deactivate animation and tooltip
+    $('#tip_p02s01-1').toggleClass('active inactive');
+
+    // Call animation
+    anim_p02s1_2();
   });
   
   
   //Check for "next" click
   $('#tip_p02s01-2 .link').on('click', function(){
-    // alert('2-1.2->2-2.1 yes anim');
+
     //Deactivate tip an animation
     $('#tip_p02s01-2').toggleClass('active inactive');
+    $('#anim_p02s01-1').toggleClass('active inactive');
+
+    // Call animation
+    anim_p02s1_3();
+  });
+
+  
+  
+  //Check for "next" click
+  $('#tip_p02s01-3 .link').on('click', function(){
+
+    //Deactivate tip an animation
+    $('#tip_p02s01-3').toggleClass('active inactive');
     $('#anim_p02s01-2').toggleClass('active inactive');
-    // Trigger animation
-    $('#anim_p02s02-1').toggleClass('inactive active');
-    anim_p2_s2_1 = init_anim('anim_p02s02-1', '../bodymovin/p02s02/01/data.json');
-    setTimeout( function() { anim_p2_s2_1.play(); }, 1250);
-    anim_p2_s2_1.addEventListener('loopComplete', function() {
-      anim_p2_s2_1.goToAndStop(50, true);
-    }, false);
-    setTimeout( function() {$('#tip_p02s02-1').toggleClass('inactive active'); }, 1250 );
+
+    // Call animation
+    anim_p02s1_4();
   });
 
 
- //SECTION 02
+  //END
   //Check for "next" click
-  $('#tip_p02s02-1 .link').on('click', function(){
-    // alert('p02s02-1 first in the s02 series');
+  $('#tip_p02s01-4 .link').on('click', function(){
     //Deactivate animation and tooltip
-    $('#anim_p02s02-1').toggleClass('active inactive');
-    $('#tip_p02s02-1').toggleClass('active inactive');
-    $('#tip_p02s02-2').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s02-2').toggleClass('inactive active');
-    anim_p2_s2_2 = init_anim('anim_p02s02-2', '../bodymovin/p02s02/02/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s2_2.play(); }, 1000);
-    anim_p2_s2_2.addEventListener('loopComplete', function() {
-      anim_p2_s2_2.goToAndStop(100, true);
-    }, false);  
+    $('#tip_p02s01-4').toggleClass('active inactive');
+    $('#anim_p02s01-3').toggleClass('active inactive');
+    //Deactivate Path 01
+    $('#path_02').toggleClass('active inactive');
+    //Activate End Screen
+    $('#end').toggleClass('inactive active');
   });
       
       
@@ -774,246 +855,6 @@ function anim_p01s06_4()
     }, false);
   });
 
-  
- 
-  
-  
-    //Check for "next" click
-  $('#tip_p02s02-3 .link').on('click', function(){
-   //  alert('p02s02-3 last one');
-    
-    $('#anim_p02s02-3').toggleClass('active inactive');
-    $('#tip_p02s02-3').toggleClass('active inactive');
-    $('#tip_p02s03').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s03').toggleClass('inactive active');
-    anim_p2_s3 = init_anim('anim_p02s03', '../bodymovin/p02s03/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s3.play(); }, 2000);
-    anim_p2_s3.addEventListener('loopComplete', function() {
-    anim_p2_s3.goToAndStop(100, true);
-    }, false);
-    $('#path_02_progress .two').toggleClass('active inactive');
-    $('#path_02_progress .three').toggleClass('inactive active');
-  });
-  
-  
-  
-  //SECTION 03
-  //Check for "next" click
-  $('#tip_p02s03 .link').on('click', function(){
-    $('#tip_p02s03').toggleClass('active inactive');
-    $('#anim_p02s03').toggleClass('active inactive');
-    $('#tip_p02s04-1').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s04-0').toggleClass('inactive active');
-    anim_p2_s4_0 = init_anim('anim_p02s04-0', '../bodymovin/p02s04/00/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s4_0.play(); }, 2500);
-    anim_p2_s4_0.addEventListener('loopComplete', function() {
-    anim_p2_s4_0.goToAndStop(29, true);
-    }, false);
-    $('#path_02_progress .three').toggleClass('active inactive');
-    $('#path_02_progress .four').toggleClass('inactive active');  
-  });
-
-  //SECTION 04
-  //Check for "next" click
-  $('#tip_p02s04-1 .link').on('click', function(){
-    //    alert('p02s04-1 first');
-    $('#tip_p02s04-1').toggleClass('active inactive');
-    $('#anim_p02s04-0').toggleClass('active inactive');
-    $('#tip_p02s04-2').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s04-1').toggleClass('inactive active');
-    anim_p2_s4_1 = init_anim('anim_p02s04-1', '../bodymovin/p02s04/01/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s4_1.play(); }, 850);
-    anim_p2_s4_1.addEventListener('loopComplete', function() {
-    anim_p2_s4_1.goToAndStop(50, true);
-    }, false);
-    $('#path_02_progress .four').toggleClass('active inactive');
-    $('#path_02_progress .four').toggleClass('inactive active');  
-  });
-
-
-  $('#tip_p02s04-2 .link').on('click', function(){
-    // alert('p02s04-2 second');
-
-    $('#tip_p02s04-2').toggleClass('active inactive');
-    $('#anim_p02s04-1').toggleClass('active inactive');
-    $('#tip_p02s04-3').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s04-2').toggleClass('inactive active');
-    anim_p2_s4_2 = init_anim('anim_p02s04-2', '../bodymovin/p02s04/02/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s4_2.play(); }, 1250);
-    anim_p2_s4_2.addEventListener('loopComplete', function() {
-      anim_p2_s4_2.goToAndStop(25, true);
-    }, false);
-    $('#path_02_progress .four').toggleClass('active inactive');
-    $('#path_02_progress .four').toggleClass('inactive active');  
-  });
-  
-  
-  
-  $('#tip_p02s04-3 .link').on('click', function(){
-    //  alert('p02s04-3 third');
-
-    $('#tip_p02s04-3').toggleClass('active inactive');
-    $('#anim_p02s04-2').toggleClass('active inactive');
-    $('#tip_p02s04-4').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s04-2').toggleClass('inactive active');
-    anim_p2_s4_2 = init_anim('anim_p02s04-2', '../bodymovin/p02s04/02/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s4_2.play(); }, 1500);
-    anim_p2_s4_2.addEventListener('loopComplete', function() {
-      anim_p2_s4_2.goToAndStop(25, true);
-    }, false);
-    $('#path_02_progress .four').toggleClass('active inactive');
-    $('#path_02_progress .four').toggleClass('inactive active');  
-  });
-  
-  
-  //Tip 4 off, tip 5 on
-  $('#tip_p02s04-4 .link').on('click', function(){
-          //  alert('p02s04-4 fourth');
-    
-    $('#tip_p02s04-4').toggleClass('active inactive');
-      $('#anim_p02s04-2').toggleClass('active inactive');
-  $('#tip_p02s04-5').toggleClass('inactive active');
-    //Activate animation and tooltip
-  $('#anim_p02s04-0').toggleClass('inactive active');
-      anim_p2_s4_0 = init_anim('anim_p02s04-0', '../bodymovin/p02s04/00/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-  setTimeout( function() { anim_p2_s4_0.play(); }, 3000);
-    anim_p2_s4_0.addEventListener('loopComplete', function() {
-    anim_p2_s4_0.goToAndStop(25, true);
-    }, false);
-  });
-    
-    //tip 4-5 off, tip 4-6 on
-  $('#tip_p02s04-5 .link').on('click', function(){
-    // alert('p02s04-5 five');
-
-    $('#tip_p02s04-5').toggleClass('active inactive');
-    $('#anim_p02s04-0').toggleClass('active inactive');
-    $('#tip_p02s04-6').toggleClass('inactive active');
-    //Activate animation and tooltip
-    $('#anim_p02s04-6').toggleClass('inactive active');
-    anim_p2_s4_6 = init_anim('anim_p02s04-6', '../bodymovin/p02s04/06/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s4_6.play(); }, 2000);
-    anim_p2_s4_6.addEventListener('loopComplete', function() {
-    anim_p2_s4_6.goToAndStop(50, true);
-    }, false);
-  });
-    
-    //tip 4-6 off, tip 4-7 on 
-  $('#tip_p02s04-6 .link').on('click', function(){
-              //alert('p02s04-5 five');
-    
-    $('#tip_p02s04-6').toggleClass('active inactive');
-      $('#anim_p02s04-6').toggleClass('active inactive');
-  $('#tip_p02s04-7').toggleClass('inactive active');
-    //Activate animation and tooltip
-  $('#anim_p02s04-7').toggleClass('inactive active');
-      anim_p2_s4_7= init_anim('anim_p02s04-7', '../bodymovin/p02s04/07/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-  setTimeout( function() { anim_p2_s4_7.play(); }, 500);
-    anim_p2_s4_7.addEventListener('loopComplete', function() {
-    anim_p2_s4_7.goToAndStop(50, true);
-    }, false);
-  });
-    
-    //SECTION 05 
-    //tip 4-7 off, tip 5-1 on
-  $('#tip_p02s04-7 .link').on('click', function(){
-    //Deactivate animation and tooltip
-    $('#tip_p02s04-7').toggleClass('active inactive');
-    $('#anim_p02s04-7').toggleClass('active inactive');
-    // Trigger animation
-    anim_p2_s5_1 = init_anim('anim_p02s05-1', '../bodymovin/p02s05/01/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p02s05-1').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s05-1').toggleClass('inactive active');
-    setTimeout( function() { anim_p2_s5_1.play(); }, 1100);
-    anim_p2_s5_1.addEventListener('loopComplete', function() {
-    anim_p2_s5_1.goToAndStop(25, true);
-    }, false);
-    //Change progression
-    $('#path_02_progress .four').toggleClass('active inactive');
-    $('#path_02_progress .five').toggleClass('inactive active');
-  });
-
-
-// Tip 5-1 off, tip 5-2 on
-  //Check for "next" click
-  $('#tip_p02s05-1 .link').on('click', function(){
-    $('#tip_p02s05-1').toggleClass('active inactive');
-    $('#anim_p02s05-1').toggleClass('active inactive');
-    // Trigger animation
-    anim_p2_s5_2 = init_anim('anim_p02s05-2', '../bodymovin/p02s05/02/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p02s05-2').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s05-2').toggleClass('inactive active');
-    setTimeout( function() { anim_p2_s5_2.play(); }, 2350);
-    anim_p2_s5_2.addEventListener('loopComplete', function() {
-    anim_p2_s5_2.goToAndStop(50, true);
-    }, false);
-  });
-    
-    // Tip 5-2 off, tip 5-3 on
-  $('#tip_p02s05-2 .link').on('click', function(){
-    $('#tip_p02s05-2').toggleClass('active inactive');
-    $('#anim_p02s05-2').toggleClass('active inactive');
-    // Trigger animation
-    anim_p2_s5_3 = init_anim('anim_p02s05-3', '../bodymovin/p02s05/03/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p02s05-3').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s05-3').toggleClass('inactive active');
-    setTimeout( function() { anim_p2_s5_3.play(); }, 2000);
-    anim_p2_s5_3.addEventListener('loopComplete', function() {
-    anim_p2_s5_3.goToAndStop(100, true);
-    }, false);
-  });
-    
-    // Tip 5-3 off, tip 5-4 on
-  $('#tip_p02s05-3 .link').on('click', function(){
-    $('#tip_p02s05-3').toggleClass('active inactive');
-    $('#anim_p02s05-3').toggleClass('active inactive');
-    // Trigger animation
-    anim_p2_s5_4 = init_anim('anim_p02s05-4', '../bodymovin/p02s05/04/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p02s05-4').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s05-4').toggleClass('inactive active');
-    setTimeout( function() { anim_p2_s5_4.play(); }, 1750);
-    anim_p2_s5_4.addEventListener('loopComplete', function() {
-    anim_p2_s5_4.goToAndStop(2500);
-    }, false);
-  });
-    
-    // Tip 5-4 off, tip 5-5 on
-  $('#tip_p02s05-4 .link').on('click', function(){
-    //Deactivate animation and tooltip
-    $('#tip_p02s05-4').toggleClass('active inactive');
-    $('#anim_p02s05-4').toggleClass('active inactive');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p02s06').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s06').toggleClass('inactive active');
-    //Change progression
-    $('#path_02_progress .five').toggleClass('active inactive');
-    $('#path_02_progress .six').toggleClass('inactive active');
-  });
 
 
   //END
@@ -1041,7 +882,7 @@ function anim_p01s06_4()
 
 
   //////////////////////
-  // PATH 03 || 2 - 7 //
+  // PATH 03 || 2 - 8 //
   //////////////////////
 
   //SECTION 02

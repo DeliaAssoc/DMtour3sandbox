@@ -513,6 +513,32 @@ image, svg, img {
 /* = Path 02 = */
 /* =========== */
 
+#tip_p02s01-1 {
+    left: 310px;
+    bottom: 20px;
+}
+
+#tip_p02s01-2 {
+    left: 630px;
+    bottom: 230px;	
+}
+
+#tip_p02s01-3 {
+    left: 580px;
+    bottom: 125px;	
+}
+
+#tip_p02s01-4 {
+    left: 647px;
+    bottom: 52px;	
+}
+
+
+
+/* =========== */
+/* = Path 03 = */
+/* =========== */
+
 .tablet {
   background-image: url('../images/ipad.png');
   background-repeat: no-repeat;
@@ -558,11 +584,6 @@ image, svg, img {
   padding: 0;
   position: relative;
 }
-
-
-/* =========== */
-/* = Path 03 = */
-/* =========== */
 
 
 /* ======= */
