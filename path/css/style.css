@@ -96,6 +96,14 @@ image, svg, img {
   max-width: 320px;
 }
 
+.tip.wide .inner {
+	max-width: 540px;
+}
+
+.tip.small {
+	font-size: 14px !important;
+}
+
 .tip.active,
 .image.active,
 .animation.active {
@@ -540,50 +548,112 @@ image, svg, img {
 /* =========== */
 
 .tablet {
-  background-image: url('../images/ipad.png');
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-image: url( '../images/ipad.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: 850px;
-  padding: 80px 0;
-  margin: 18px 0;
+	padding: 80px 0;
+	margin: 18px 0;
 }
 
 .tablet .animation {
 	height: 552px;
 	width: 718px;
-  margin-top: -32px;
+	margin-top: -32px;
 	margin-left: auto;
 	margin-right: auto;
-  position: relative;
+	position: relative;
+	transform: matrix3d(1.35, 0, 0, 0, 0, 1.35, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
 }
 
 .tablet .image {
 	height: 552px;
 	width: 718px;
-  margin-top: -32px;
+	margin-top: -32px;
 	margin-left: auto;
 	margin-right: auto;
-  position: relative;
+	position: relative;
 }
 
 .tablet .image img {
-  width: 936px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  transform-origin: 0px 32px 0px;
-  backface-visibility: visible;
-  transform-style: flat;
-  overflow: hidden;
-  transform: matrix3d(0.766667, 0, 0, 0, 0, 0.766667, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
+	width: 936px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	transform-origin: 0px 32px 0px;
+	backface-visibility: visible;
+	transform-style: flat;
+	overflow: hidden;
+	transform: matrix3d(0.766667, 0, 0, 0, 0, 0.766667, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
 }
 
 .tablet .container {
-  padding: 0;
-  position: relative;
+	padding: 0;
+	position: relative;
 }
+
+
+/* Section 01 */
+#tip_p03s01 {
+    left: 380px;
+    bottom: 105px;
+}
+
+
+/* Section 02 */
+#tip_p03s02 {
+    left: 540px;
+    bottom: 165px;
+}
+
+
+/* Section 03 */
+#tip_p03s03-1 {
+    left: 750px;
+    bottom: 25px;
+}
+
+#tip_p03s03-2 {
+    left: 600px;
+}
+
+
+/* Section 04 */
+#tip_p03s04 {
+    left: 285px;
+    bottom: 0;
+}
+
+
+/* Section 05 */
+#tip_p03s05 {
+    left: 472px;
+    bottom: 45px;
+}
+
+
+/* Section 06 */
+#tip_p03s06 {
+    left: 600px;
+    bottom: 305px;
+}
+
+
+/* Section 07 */
+#tip_p03s07 {
+    left: 375px;
+    bottom: 0;
+}
+
+
+/* Section 08 */
+#tip_p03s08 {
+    left: 800px;
+    bottom: 150px;
+}
+
 
 
 /* ======= */

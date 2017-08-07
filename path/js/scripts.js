@@ -14,8 +14,7 @@ var anim_p1_s1_2,
     anim_p2_s1_3,
     anim_p2_s4,
     anim_p3_s1,
-    anim_p3_s3_1,
-    anim_p3_s3_2,
+    anim_p3_s3,
     anim_p3_s5,
     anim_p3_s7
 
@@ -35,8 +34,7 @@ function init_anim(selector, data) {
   bodymovin.destroy( anim_p2_s1_2 );
   bodymovin.destroy( anim_p2_s1_3 );
   bodymovin.destroy( anim_p3_s1 );
-  bodymovin.destroy( anim_p3_s3_1 );
-  bodymovin.destroy( anim_p3_s3_2 );  
+  bodymovin.destroy( anim_p3_s3 );
   bodymovin.destroy( anim_p3_s5 );
   bodymovin.destroy( anim_p3_s7 );
 
@@ -436,6 +434,10 @@ function anim_p01s06_4()
 
 
 
+
+
+
+
 //////////  PATH 02  //////////
 // Slide 1
 
@@ -500,6 +502,10 @@ function anim_p02s1_4()
 
 
 
+
+
+
+
 //////////  PATH 03  //////////
 // Slide 1
 
@@ -510,22 +516,140 @@ function anim_p03_1()
   setTimeout( function() { $( '#tip_p03s01' ).toggleClass( 'inactive active' ); }, 750 );
 
   // Trigger animation
-  anim_p3_s3_1 = init_anim( 'anim_p03s01', '../bodymovin/p03s01/data.json' );
+  anim_p3_s1 = init_anim( 'anim_p03s01', '../bodymovin/p03s01/data.json' );
 
   // Play animation and pause on frame 1
-  anim_p3_s3_1.addEventListener( 'data_ready', function()
-  { anim_p3_s3_1.play();
-    anim_p3_s3_1.goToAndStop( 1, true );
+  anim_p3_s1.addEventListener( 'data_ready', function() {
+    anim_p3_s1.goToAndStop( 1, true );
   });
 
-  // Play animation after 1000ms
+  // Play animation after 1500ms
   setTimeout( function(){
-    anim_p3_s3_1.play();
-    anim_p3_s3_1.addEventListener( 'loopComplete', function(){
-      anim_p3_s3_1.goToAndStop( 250, true );
+    anim_p3_s1.play();
+    anim_p3_s1.addEventListener( 'loopComplete', function(){
+      anim_p3_s1.goToAndStop( 250, true );
     });
   }, 1500);
 }
+
+
+// Slide 2
+function anim_p03_2()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p03s02' ).toggleClass( 'inactive active' );
+  setTimeout( function() { $( '#tip_p03s02' ).toggleClass( 'inactive active' ); }, 750);
+}
+
+
+// Slide 3
+
+function anim_p03_3_1()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p03s03' ).toggleClass( 'inactive active' );
+  setTimeout( function() { $( '#tip_p03s03-1' ).toggleClass( 'inactive active' ); }, 750);
+
+  // Trigger animation
+  anim_p3_s3 = init_anim( 'anim_p03s03', '../bodymovin/p03s03/data.json' );
+
+  // Play animation and pause on frame 1
+  anim_p3_s3.addEventListener( 'data_ready', function(){
+    anim_p3_s3.goToAndStop( 1, true );
+  });
+}
+
+function anim_p03_3_2()
+{
+  // Activate screen/animation and tooltip
+  setTimeout( function() { $( '#tip_p03s03-2' ).toggleClass( 'inactive active' ); }, 750);
+
+  // Play animation after 1250ms
+  setTimeout( function(){
+    anim_p3_s3.play();
+    anim_p3_s3.addEventListener( 'loopComplete', function(){
+      anim_p3_s3.goToAndStop( 180, true );
+    });
+  }, 1250);
+}
+
+
+// Slide 4
+function anim_p03_4()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p03s04' ).toggleClass( 'inactive active' );
+  setTimeout( function() { $( '#tip_p03s04' ).toggleClass( 'inactive active' ); }, 750);
+}
+
+
+// Slide 5
+function anim_p03_5()
+{
+  // Activate screen/animation and tooltip
+  $( '#anim_p03s05' ).toggleClass( 'inactive active' );
+  setTimeout( function() { $( '#tip_p03s05' ).toggleClass( 'inactive active' ); }, 750);
+
+  // Trigger animation
+  anim_p3_s5 = init_anim( 'anim_p03s05', '../bodymovin/p03s05/data.json' );
+
+  // Play animation and pause on frame 1
+  anim_p3_s5.addEventListener( 'data_ready', function(){
+    anim_p3_s5.goToAndStop( 1, true );
+  });
+
+  // Play animation after 500ms
+  setTimeout( function(){
+    anim_p3_s5.play();
+    anim_p3_s5.addEventListener( 'loopComplete', function(){
+      anim_p3_s5.goToAndStop( 135, true );
+    });
+  }, 500);
+}
+
+
+// Slide 6
+function anim_p03_6()
+{
+  //Activate animation and tooltip
+  setTimeout( function() { $( '#tip_p03s06' ).toggleClass( 'inactive active' ); }, 1100);
+  $( '#anim_p03s06' ).toggleClass( 'inactive active' );
+}
+
+
+// Slide 7
+function anim_p03_7()
+{
+  //Activate animation and tooltip
+  setTimeout( function() { $( '#tip_p03s07' ).toggleClass( 'inactive active' ); }, 1100);
+  $( '#anim_p03s07' ).toggleClass( 'inactive active' );
+
+  // Trigger animation
+  anim_p3_s7 = init_anim( 'anim_p03s07', '../bodymovin/p03s07/data.json' );
+
+  // Play animation and pause on frame 1
+  anim_p3_s7.addEventListener( 'data_ready', function(){
+    anim_p3_s7.goToAndStop( 1, true );
+  });
+
+  // Play animation after 500ms
+  setTimeout( function(){
+    anim_p3_s7.play();
+    anim_p3_s7.addEventListener( 'loopComplete', function(){
+      anim_p3_s7.goToAndStop( 135, true );
+    });
+  }, 500);  
+}
+
+
+// Slide 7
+function anim_p03_8()
+{
+  //Activate animation and tooltip
+  setTimeout( function() { $( '#tip_p03s08' ).toggleClass( 'inactive active' ); }, 1100);
+  $( '#anim_p03s08' ).toggleClass( 'inactive active' );  
+}
+
 
 
 
@@ -778,8 +902,6 @@ function anim_p03_1()
 
 
 
-
-
   //////////////////////
   ////// PATH 02 ///////
   //////////////////////
@@ -833,43 +955,6 @@ function anim_p03_1()
     //Activate End Screen
     $('#end').toggleClass('inactive active');
   });
-      
-      
-      
-      
-  //Check for "next" click
-  $('#tip_p02s02-2 .link').on('click', function(){
-  //  alert('p02s02-2 second one');
-    
-    $('#anim_p02s02-2').toggleClass('active inactive');
-    $('#tip_p02s02-2').toggleClass('active inactive');
-  $('#tip_p02s02-3').toggleClass('inactive active');
-    //Activate animation and tooltip
-  $('#anim_p02s02-3').toggleClass('inactive active');
-    anim_p2_s2_3 = init_anim('anim_p02s02-3', '../bodymovin/p02s02/03/data.json');
-    //setTimeout( function() { $('#tip_p02s02-2').toggleClass('inactive active'); }, 1100);
-    //anim_p2_s2_2.playSegments([ 0, 500 ], true );
-    setTimeout( function() { anim_p2_s2_3.play(); }, 1000);
-    anim_p2_s2_3.addEventListener('loopComplete', function() {
-    anim_p2_s2_3.goToAndStop(1100);
-    }, false);
-  });
-
-
-
-  //END
-  //Check for "next" click
-  $('#tip_p02s06 .link').on('click', function(){
-    //Deactivate animation and tooltip
-    $('#tip_p02s06').toggleClass('active inactive');
-    $('#anim_p02s06').toggleClass('active inactive');
-    //Deactivate Path 01
-    $('#path_02').toggleClass('active inactive');
-    //Activate End Screen
-    $('#end').toggleClass('inactive active');
-  });
-
-
 
 
 
@@ -888,12 +973,14 @@ function anim_p03_1()
   //SECTION 02
   // Check for "next" click
   $('#tip_p03s01 .link').on('click', function(){
+
     // Deactivate animation and tooltip
     $('#tip_p03s01').toggleClass('active inactive');
     $('#anim_p03s01').toggleClass('active inactive');
-    // Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s02').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s02').toggleClass('inactive active');
+
+    // Call animation
+    anim_p03_2();
+
     // Change progression
     $('#path_03_progress .one').toggleClass('active inactive');
     $('#path_03_progress .two').toggleClass('inactive active');
@@ -903,111 +990,131 @@ function anim_p03_1()
   //SECTION 03
   //Check for "next" click
   $('#tip_p03s02 .link').on('click', function(){
+
     //Deactivate animation and tooltip
     $('#tip_p03s02').toggleClass('active inactive');
     $('#anim_p03s02').toggleClass('active inactive');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s03').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s03').toggleClass('inactive active');
+
+    //Call animation
+    anim_p03_3_1();
+
     //Change progression
-    $('#path_03_progress .two').toggleClass('active inactive');
-    $('#path_03_progress .three').toggleClass('inactive active');
+    $( '#path_03_progress .two' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .three' ).toggleClass( 'inactive active' );
   });
 
+
+  $ ('#tip_p03s03-1 .link' ).on( 'click', function(){
+
+    //Deactivate animation and tooltip
+    $( '#tip_p03s03-1' ).toggleClass( 'active inactive' );
+
+    //Call animation
+    anim_p03_3_2();
+  });
 
 
   //SECTION 04
   //Check for "next" click
-  $('#tip_p03s03 .link').on('click', function(){
+  $( '#tip_p03s03-2 .link' ).on( 'click', function(){
+
     //Deactivate animation and tooltip
-    $('#tip_p03s03').toggleClass('active inactive');
-    $('#anim_p03s03').toggleClass('active inactive');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s04').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s04').toggleClass('inactive active');
+    $( '#tip_p03s03-2' ).toggleClass( 'active inactive' );
+    $( '#anim_p03s03' ).toggleClass( 'active inactive' );
+
+    // Call animation
+    anim_p03_4();
+
     //Change progression
-    $('#path_03_progress .three').toggleClass('active inactive');
-    $('#path_03_progress .four').toggleClass('inactive active');
+    $( '#path_03_progress .three' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .four' ).toggleClass( 'inactive active' );
   });
+
+
+
 
   //SECTION 05
   //Check for "next" click
-  $('#tip_p03s04 .link').on('click', function(){
+  $( '#tip_p03s04 .link' ).on( 'click', function(){
+
     //Deactivate animation and tooltip
-    $('#tip_p03s04').toggleClass('active inactive');
-    $('#anim_p03s04').toggleClass('active inactive');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s05').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s05').toggleClass('inactive active');
+    $( '#tip_p03s04' ).toggleClass( 'active inactive' );
+    $( '#anim_p03s04' ).toggleClass( 'active inactive' );
+
+    // Call animation
+    anim_p03_5();
+
     //Change progression
-    $('#path_03_progress .four').toggleClass('active inactive');
-    $('#path_03_progress .five').toggleClass('inactive active');
+    $( '#path_03_progress .four' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .five' ).toggleClass( 'inactive active' );
   });
+
+
 
 
   //SECTION 06
   //Check for "next" click
-  $('#tip_p03s05 .link').on('click', function(){
+  $( '#tip_p03s05 .link' ).on( 'click', function(){
+
     //Deactivate animation and tooltip
-    $('#tip_p03s05').toggleClass('active inactive');
-    $('#anim_p03s05').toggleClass('active inactive');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s06').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s06').toggleClass('inactive active');
+    $( '#tip_p03s05' ).toggleClass( 'active inactive' );
+    $( '#anim_p03s05' ).toggleClass( 'active inactive' );
+
+    // Call animation
+    anim_p03_6();
+
     //Change progression
-    $('#path_03_progress .five').toggleClass('active inactive');
-    $('#path_03_progress .six').toggleClass('inactive active');
+    $( '#path_03_progress .five' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .six' ).toggleClass( 'inactive active' );
   });
 
 
-    //Check for "next" click
-  $('#tip_p03s06 .link').on('click', function(){
-    //Deactivate animation and tooltip
-    $('#tip_p03s06').toggleClass('active inactive');
-    $('#anim_p03s06').toggleClass('active inactive');
-    //Trigger animation
-    anim_p3_s7_1 = init_anim('anim_p03s07-1', '../bodymovin/p03s07/01/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s07-1').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s07-1').toggleClass('inactive active');
-    //Change progression
-    $('#path_03_progress .six').toggleClass('active inactive');
-    $('#path_03_progress .seven').toggleClass('inactive active');
-  });
 
 
   //SECTION 07
   //Check for "next" click
-  $('#tip_p03s07-1 .link').on('click', function(){
+  $( '#tip_p03s06 .link' ).on( 'click', function(){
+
     //Deactivate animation and tooltip
-    $('#tip_p03s07-1').toggleClass('active inactive');
-    $('#anim_p03s07-1').toggleClass('active inactive');
-    //Trigger animation
-    anim_p3_s7_2 = init_anim('anim_p03s07-2', '../bodymovin/p03s07/02/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s07-2').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s07-2').toggleClass('inactive active');
+    $( '#tip_p03s06' ).toggleClass( 'active inactive' );
+    $( '#anim_p03s06' ).toggleClass( 'active inactive' );
+
+    // Call animation
+    anim_p03_7();
+
+    //Change progression
+    $( '#path_03_progress .six' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .seven' ).toggleClass( 'inactive active' );
   });
-    
-    
-    $('#tip_p03s07-2 .link').on('click', function(){
+
+
+
+
+  //SECTION 08
+  //Check for "next" click
+  $( '#tip_p03s07 .link' ).on( 'click', function(){
+
     //Deactivate animation and tooltip
-    $('#tip_p03s07-2').toggleClass('active inactive');
-    $('#anim_p03s07-2').toggleClass('active inactive');
-    //Trigger animation
-    anim_p3_s7_4 = init_anim('anim_p03s07-4', '../bodymovin/p03s07/04/data.json');
-    //Activate animation and tooltip
-    setTimeout( function() { $('#tip_p03s07-3').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s07-4').toggleClass('inactive active');
+    $( '#tip_p03s07' ).toggleClass( 'active inactive' );
+    $( '#anim_p03s07' ).toggleClass( 'active inactive' );
+
+    // Call animation
+    anim_p03_8();
+
+    //Change progression
+    $( '#path_03_progress .seven' ).toggleClass( 'active inactive' );
+    $( '#path_03_progress .eight' ).toggleClass( 'inactive active' );
   });
+
+
 
 
   //END
   //Check for "next" click
-  $('#tip_p03s07-3 .link').on('click', function(){
+  $('#tip_p03s08 .link').on('click', function(){
     //Deactivate animation and tooltip
-    $('#tip_p03s07-3').toggleClass('active inactive');
-    $('#anim_p03s07-3').toggleClass('active inactive');
+    $('#tip_p03s08').toggleClass('active inactive');
+    $('#anim_p03s08').toggleClass('active inactive');
     //Deactivate Path 01
     $('#path_03').toggleClass('active inactive');
     //Activate End Screen
