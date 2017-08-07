@@ -1947,9 +1947,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate Section 01 tip, animation, number
-    setTimeout( function() { $('#tip_p03s01').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s01').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_1();
   });
 
   //Section 02 - Clicked
@@ -1958,11 +1957,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate Section 02 tip, animation, number
-    setTimeout( function() { $('#tip_p03s02').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s02').toggleClass('inactive active');
-    //Trigger animation
-    anim_p1_s2 = init_anim('anim_p01s02', '../bodymovin/p01s02/data.json');
+    // Call animation and tip
+    anim_p03_2();
   });
 
   //Section 03 - Clicked
@@ -1971,10 +1967,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate Section 03 tip, animation, number
-    setTimeout( function() { $('#tip_p03s03').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s03').toggleClass('inactive active');
-    $('#path_03_progress .three').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_3_1();
   });
 
   //Section 04 - Clicked
@@ -1983,9 +1977,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate Section 04 tip, animation, number
-    setTimeout( function() { $('#tip_p03s04').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s04').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_4();
   });
 
   //Section 05 - Clicked
@@ -1994,9 +1987,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate Section 05 tip, animation, number
-    setTimeout( function() { $('#tip_p03s05').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s05').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_5();
   });
 
 
@@ -2006,9 +1998,8 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate tip, animation, number
-    setTimeout( function() { $('#tip_p03s06').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s06').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_6();
   });
 
   //Section 07 - Clicked
@@ -2017,10 +2008,18 @@ function anim_p03_8()
     // Change pagination
     changePagination( this );
 
-    //Activate tip, animation, number
-    anim_p3_s7_1 = init_anim('anim_p03s07-1', '../bodymovin/p03s07/01/data.json');
-    setTimeout( function() { $('#tip_p03s07-1').toggleClass('inactive active'); }, 1100);
-    $('#anim_p03s07-1').toggleClass('inactive active');
+    // Call animation and tip
+    anim_p03_7();
+  });
+
+  //Section 07 - Clicked
+  $('#path_03_progress .eight').on('click', function(){
+
+    // Change pagination
+    changePagination( this );
+
+    // Call animation and tip
+    anim_p03_8();
   });
 
 });
