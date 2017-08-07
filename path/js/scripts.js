@@ -1849,8 +1849,25 @@ function anim_p01s06_4()
   ////////////////////////////////////////////////////
 
 
-  function pageinationResets()
+
+  // Change clicked pagination number to clicked item and deactivate
+  // all others.  Deactivate all active tips currently active.
+  function changePagination( pageClicked )
   {
+
+    var pageNumber = $( pageClicked ).attr( 'class' ); // Grab classes of element clicked
+        clickedNumber = pageNumber.split( ' ' ); // Split classes by spaces
+        ancenstor = $( pageClicked ).closest( '[id]' ), // find element path with id closest to item clicked
+        ancId = ancenstor.attr( 'id' ); // Grab id name of path
+
+
+    // console.log(pageNumber);
+    // console.log(clickedNumber);
+    // console.log(pageClicked);
+    // console.log(ancenstor);
+    // console.log( '#' + ancId + ' ' + '.' + clickedNumber[1] );
+
+
     //Deactivate all tips
     $('.tip').removeClass('active');
     $('.tip').removeClass('inactive');
@@ -1865,6 +1882,9 @@ function anim_p01s06_4()
     $('.number').removeClass('active');
     $('.number').removeClass('inactive');
     $('.number').addClass('inactive');
+
+    // Activate pagination number clicked
+    $('#' + ancId + ' ' + '.' + clickedNumber[1] ).toggleClass('inactive active');
 
     //Deactivate all tips AGAIN, in case another
     // was clicked before this one is activated
@@ -1882,12 +1902,11 @@ function anim_p01s06_4()
   //Section 01 - Clicked
   $('#path_01_progress .one').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
     //Activate Section 01 tip, animation, number
     anim_p01s01_1();
-    $('#path_01_progress .one').toggleClass('inactive active');
 
   });
 
@@ -1896,12 +1915,11 @@ function anim_p01s06_4()
   //Section 02 - Clicked
   $('#path_01_progress .two').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
-    //Activate Section 02 tip, animation, number
+    //Activate Section 02 tip & animation
     anim_p01s02_1();
-    $('#path_01_progress .two').toggleClass('inactive active');
   });
 
 
@@ -1909,12 +1927,12 @@ function anim_p01s06_4()
   //Section 03 - Clicked
   $('#path_01_progress .three').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
-    //Activate Section 03 tip, animation, number
+    //Activate Section 03 tip & animation
     anim_p01s03();
-    $('#path_01_progress .three').toggleClass('inactive active');
+    
   });
 
 
@@ -1922,12 +1940,11 @@ function anim_p01s06_4()
   //Section 04 - Clicked
   $('#path_01_progress .four').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
-    //Activate Section 04 tip, animation, number
+    //Activate Section 04 tip & animation
     anim_p01s04_1();
-    $('#path_01_progress .four').toggleClass('inactive active');
   });
 
 
@@ -1935,12 +1952,11 @@ function anim_p01s06_4()
   //Section 05 - Clicked
   $('#path_01_progress .five').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
-    //Activate Section 05 tip, animation, number
+    //Activate Section 05 tip & animation
     anim_p01s05_1();
-    $('#path_01_progress .five').toggleClass('inactive active');
   });
 
 
@@ -1948,18 +1964,12 @@ function anim_p01s06_4()
   //Section 06 - Clicked
   $('#path_01_progress .six').on('click', function(){
 
-    // Reset sections and tips
-    pageinationResets();
+    // Change pagination
+    changePagination( this );
 
-    //Activate Section 06 tip, animation, number
+    //Activate Section 06 tip & animation
     anim_p01s06_1();
-    $('#path_01_progress .six').toggleClass('inactive active');
   });
-
-
-
-
-
 
 
 
@@ -1971,192 +1981,7 @@ function anim_p01s06_4()
   // PATH 02 //
   /////////////
 
-  //Section 01 - Clicked
-  $('#path_02_progress .one').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    anim_p2_s1_1 = init_anim('anim_p02s01-1', '../bodymovin/p02s01/data.json');
-    setTimeout( function() { $('#tip_p02s01-1').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s01-1').toggleClass('inactive active');
-    $('#path_02_progress .one').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  });
-
-
-
-  //Section 02 - Clicked
-  $('#path_02_progress .two').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    anim_p2_s2_1 = init_anim('anim_p02s02-1', '../bodymovin/p02s02/01/data.json');
-    setTimeout( function() { anim_p2_s2_1.play(); }, 1250);
-    anim_p2_s2_1.addEventListener('loopComplete', function() {
-    anim_p2_s2_1.goToAndStop(50, true);
-     }, false); 
-    setTimeout( function() { $('#tip_p02s02-1').toggleClass('inactive active'); }, 1250 );
-    $('#anim_p02s02-1').toggleClass('inactive active');
-    $('#path_02_progress .two').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  });
-
-
-
-  //Section 03 - Clicked
-  $('#path_02_progress .three').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    anim_p2_s3 = init_anim('anim_p02s03', '../bodymovin/p02s03/data.json');
-    setTimeout( function() { anim_p2_s3.play(); }, 2000);
-    anim_p2_s3.addEventListener('loopComplete', function() {
-    anim_p2_s3.goToAndStop(100, true);
-    }, false);
-    setTimeout( function() { $('#tip_p02s03').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s03').toggleClass('inactive active');
-    $('#path_02_progress .three').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  });
-
-
-
-  //Section 04 - Clicked
-  $('#path_02_progress .four').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    anim_p2_s4_0 = init_anim('anim_p02s04-0', '../bodymovin/p02s04/00/data.json');
-    setTimeout( function() { anim_p2_s4_0.goToAndStop(1,true); }, 1250);
-    // anim_p2_s4_1.addEventListener('loopComplete', function() {
-    // anim_p2_s4_1.goToAndStop(100, true);
-    // }, false);
-    setTimeout( function() { $('#tip_p02s04-1').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s04-0').toggleClass('inactive active');
-    $('#path_02_progress .four').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  });
-
-
-
-  //Section 05 - Clicked
-  $('#path_02_progress .five').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    anim_p2_s5_1 = init_anim('anim_p02s05-1', '../bodymovin/p02s05/01/data.json');
-    setTimeout( function() { $('#tip_p02s05-1').toggleClass('inactive active'); }, 1100);
-    setTimeout( function() { anim_p2_s5_1.play(); }, 1100);
-    anim_p2_s5_1.addEventListener('loopComplete', function() {
-    anim_p2_s5_1.goToAndStop(50, true);
-    }, false);
-    $('#anim_p02s05-1').toggleClass('inactive active');
-    $('#path_02_progress .five').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  });
-
-
-
-    //Section 06 - Clicked
-  $('#path_02_progress .six').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
-    //Activate tip, animation, number
-    setTimeout( function() { $('#tip_p02s06').toggleClass('inactive active'); }, 1100);
-    $('#anim_p02s06').toggleClass('inactive active');
-    $('#path_02_progress .six').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-  }); 
-
-
-
-
-
-
+  // NO PAGINATION FOR PATH 02
 
 
 
@@ -2170,191 +1995,84 @@ function anim_p01s06_4()
 
   //Section 01 - Clicked
   $('#path_03_progress .one').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+    
+    // Change pagination
+    changePagination( this );
+
     //Activate Section 01 tip, animation, number
     setTimeout( function() { $('#tip_p03s01').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s01').toggleClass('inactive active');
-    $('#path_03_progress .one').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
   });
 
   //Section 02 - Clicked
   $('#path_03_progress .two').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate Section 02 tip, animation, number
     setTimeout( function() { $('#tip_p03s02').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s02').toggleClass('inactive active');
-    $('#path_03_progress .two').toggleClass('inactive active');
     //Trigger animation
     anim_p1_s2 = init_anim('anim_p01s02', '../bodymovin/p01s02/data.json');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
   });
 
   //Section 03 - Clicked
   $('#path_03_progress .three').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate Section 03 tip, animation, number
     setTimeout( function() { $('#tip_p03s03').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s03').toggleClass('inactive active');
     $('#path_03_progress .three').toggleClass('inactive active');
-    //Trigger animation
-    // anim_p1_s3 = init_anim('anim_p01s03', '../bodymovin/p01s03/data.json');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
   });
 
   //Section 04 - Clicked
   $('#path_03_progress .four').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate Section 04 tip, animation, number
     setTimeout( function() { $('#tip_p03s04').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s04').toggleClass('inactive active');
-    $('#path_03_progress .four').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-    //Trigger animation
-    //anim_p1_s4_1 = init_anim('anim_p01s04-1', '../bodymovin/p01s04/01/data.json');
   });
 
   //Section 05 - Clicked
   $('#path_03_progress .five').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate Section 05 tip, animation, number
     setTimeout( function() { $('#tip_p03s05').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s05').toggleClass('inactive active');
-    $('#path_03_progress .five').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
-    //Trigger animation
-    //anim_p1_s5 = init_anim('anim_p01s05', '../bodymovin/p01s05/data.json');
-    //anim_p1_s5.play();
-    //anim_p1_s5.addEventListener('loopComplete', function() {
-      //anim_p1_s5.goToAndStop(100, true);
-    //}, false);
   });
 
 
    //Section 07 - Clicked
   $('#path_03_progress .six').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate tip, animation, number
     setTimeout( function() { $('#tip_p03s06').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s06').toggleClass('inactive active');
-    $('#path_03_progress .six').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
   });
 
   //Section 07 - Clicked
   $('#path_03_progress .seven').on('click', function(){
-    //Deactivate all tips
-    $('.tip').removeClass('active');
-    $('.tip').removeClass('inactive');
-    $('.tip').addClass('inactive');
-    //Deactivate all sections
-    $('.section').removeClass('active');
-    $('.section').removeClass('inactive');
-    $('.section').addClass('inactive');
-    //Deactivate all numbers
-    $('.number').removeClass('active');
-    $('.number').removeClass('inactive');
-    $('.number').addClass('inactive');
+
+    // Change pagination
+    changePagination( this );
+
     //Activate tip, animation, number
     anim_p3_s7_1 = init_anim('anim_p03s07-1', '../bodymovin/p03s07/01/data.json');
     setTimeout( function() { $('#tip_p03s07-1').toggleClass('inactive active'); }, 1100);
     $('#anim_p03s07-1').toggleClass('inactive active');
-    $('#path_03_progress .seven').toggleClass('inactive active');
-    //Deactivate all tips AGAIN, in case another
-    // was clicked before this one is activated
-    setTimeout( function() { $('.tip').removeClass('active'); }, 1000);
-    setTimeout( function() { $('.tip').removeClass('inactive'); }, 1000);
-    setTimeout( function() { $('.tip').addClass('inactive'); }, 1000);
   });
 
-  });
+});
