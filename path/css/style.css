@@ -1097,8 +1097,8 @@ image, svg, img {
 	}
 
 	#tip_p01s05-2 {
-		left: 326px;
-		bottom: 20px;
+	    left: 185px;
+	    bottom: 150px;
 	}
 
 	#tip_p01s05-3 {
@@ -1131,7 +1131,29 @@ image, svg, img {
 
 	/* === PATH 02 === */
 
+	#tip_p02s01-1 {
+	    left: 125px;
+	    bottom: 5px;
+	}
 
+	#tip_p02s01-2 {
+	    left: 415px;
+	    bottom: 195px;
+	}
+
+	#tip_p02s01-3 {
+	    left: 365px;
+	    bottom: 115px;
+	}
+
+	#tip_p02s01-2 .inner {
+		max-width: 300px;
+	}
+
+	#tip_p02s01-4 {
+	    left: 435px;
+	    bottom: 25px;
+	}
 
 
     /* === PATH 03 === */
