@@ -85,15 +85,15 @@ image, svg, img {
 
 .tip.animated {
 	-webkit-transition-delay: 10s !important;
-  transition-delay: 10s !important;
+	transition-delay: 10s !important;
 }
 
 .tip.small .inner {
-  max-width: 180px;
+	max-width: 180px;
 }
 
 .tip.large .inner {
-  max-width: 320px;
+	max-width: 320px;
 }
 
 .tip.wide .inner {
@@ -107,103 +107,103 @@ image, svg, img {
 .tip.active,
 .image.active,
 .animation.active {
-  display: block;
+	display: block;
 }
 
 .tip.inactive,
 .image.inactive,
 .animation.inactive {
-  display: none;
+	display: none;
 }
 
 .link {
-  color: #fff;
-  background: #FA5048;
-  font-size: 18px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 30px;
-  display: block;
-  width: 120px;
-  margin-top: 20px;
-  border: none;
+	color: #fff;
+	background: #FA5048;
+	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 30px;
+	display: block;
+	width: 120px;
+	margin-top: 20px;
+	border: none;
 }
 
 .link:hover,
 .link:focus {
-  color: #FA5048;
-  background: #fff;
-  text-decoration: underline;
-  cursor: pointer;
+	color: #FA5048;
+	background: #fff;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .tip {
-  color: #fff;
-  position: absolute;
-  z-index: 2;
+	color: #fff;
+	position: absolute;
+	z-index: 2;
 }
 
 .tip .inner {
-  background: #003A47;
-  padding: 20px;
-  max-width: 250px;
+	background: #003A47;
+	padding: 20px;
+	max-width: 250px;
 	float: left;
 }
 
 .tip.top-arrow {
-  padding-top: 20px;
-  background-image: url('../images/tip-arrow-top.svg');
-  background-size: auto 21px;
-  background-repeat: no-repeat;
-  background-position: top center;
+	padding-top: 20px;
+	background-image: url('../images/tip-arrow-top.svg');
+	background-size: auto 21px;
+	background-repeat: no-repeat;
+	background-position: top center;
 }
 
 .tip.left-arrow {
-  padding-left: 20px;
-  background-image: url('../images/tip-arrow-left.svg');
-  background-size: 21px auto;
-  background-repeat: no-repeat;
-  background-position: left center;
+	padding-left: 20px;
+	background-image: url('../images/tip-arrow-left.svg');
+	background-size: 21px auto;
+	background-repeat: no-repeat;
+	background-position: left center;
 }
 
 .tip.left-arrow.high {
-  background-position: left 10%;
+	background-position: left 10%;
 }
 
 .tip.left-arrow.middle {
-  background-position: left center;
+	background-position: left center;
 }
 
 .tip.left-arrow.low {
-  background-position: left 85%;
+	background-position: left 85%;
 }
 
 .tip.right-arrow {
-  padding-right: 20px;
-  background-image: url('../images/tip-arrow-right.svg');
-  background-size: 21px auto;
-  background-repeat: no-repeat;
-  background-position: right center;
+	padding-right: 20px;
+	background-image: url('../images/tip-arrow-right.svg');
+	background-size: 21px auto;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .tip.right-arrow.high {
-  background-position: right 10%;
+	background-position: right 10%;
 }
 
 .tip.right-arrow.middle {
-  background-position: right center;
+	background-position: right center;
 }
 
 .tip.right-arrow.low {
-  background-position: right 85%;
+	background-position: right 85%;
 }
 
 .tip.bottom-arrow {
-  padding-bottom: 20px;
-  background-image: url('../images/tip-arrow-down.svg');
-  background-size: auto 21px;
-  background-repeat: no-repeat;
-  background-position: bottom center;
+	padding-bottom: 20px;
+	background-image: url('../images/tip-arrow-down.svg');
+	background-size: auto 21px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
 }
 
 .tip .bottom {
@@ -254,40 +254,40 @@ image, svg, img {
 /* ========= */
 
 #start .inner {
-  width: 65%;
-  padding: 40px 0 80px;
-  text-align: center;
-  margin: auto;
+	width: 65%;
+	padding: 40px 0 80px;
+	text-align: center;
+	margin: auto;
 }
 
 #start .inner .title {
-  color: #003A47;
-  line-height: 100%;
-  font-size: 38px;
-  font-weight: 300;
+	color: #003A47;
+	line-height: 100%;
+	font-size: 38px;
+	font-weight: 300;
 }
 
 #start .inner .link {
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
 }
 
 #start .inner .link:hover,
 #start .inner .link:focus {
-  color: #fff;
-  background: #003A47;
+	color: #fff;
+	background: #003A47;
 }
 
 #start .inner label {
-  float: left;
-  width: 245px;
-  max-width: 100%;
-  margin: 60px 0 40px;
+	float: left;
+	width: 245px;
+	max-width: 100%;
+	margin: 60px 0 40px;
 }
 
 #start .inner label:hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #start .inner label .icon {
@@ -329,28 +329,28 @@ image, svg, img {
 }
 
 #start .inner label span {
-  min-height: 20px;
-  display: inline-block;
-  background-image: url('../images/radio-button.svg');
-  background-position: 50% 35px;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  margin-right: 0;
-  padding-top: 60px;
-  color: #003A47;
-  font-size: 27px;
-  font-weight: 300;
+	min-height: 20px;
+	display: inline-block;
+	background-image: url('../images/radio-button.svg');
+	background-position: 50% 35px;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	margin-right: 0;
+	padding-top: 60px;
+	color: #003A47;
+	font-size: 27px;
+	font-weight: 300;
 }
 
 #start .inner label input[type=radio]:checked+span {
-  min-height: 20px;
-  display: inline-block;
-  background-image: url('../images/radio-button-checked.svg');
-  background-position: 50% 35px;
-  background-repeat: no-repeat;
-  background-size: 20px;
-  margin-right: 0;
-  padding-top: 60px;
+	min-height: 20px;
+	display: inline-block;
+	background-image: url('../images/radio-button-checked.svg');
+	background-position: 50% 35px;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	margin-right: 0;
+	padding-top: 60px;
 }
 
 
@@ -360,52 +360,99 @@ image, svg, img {
 /* =========== */
 
 .computer {
-  background-image: url('../images/MacBook-Silver.png');
-  background-repeat: no-repeat;
-  background-position: center center;
+	background-image: url('../images/MacBook-Silver.png');
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: 1050px;
-  padding: 80px 0;
-  margin: 40px 0;
+	padding: 80px 0;
+	margin: 40px 0;
 }
 
 .computer .animation {
-  height: 509px;
+	height: 509px;
 	width: 905px;
 	left: -1px;
-  margin-top: -40px;
+	margin-top: -40px;
 	margin-left: auto;
 	margin-right: auto;
-  position: relative;
+	position: relative;
 }
 
 .computer .image {
 	height: 509px;
 	width: 905px;
-  margin-top: -40px;
+	margin-top: -40px;
 	margin-left: auto;
 	margin-right: auto;
-  position: relative;
+	position: relative;
 }
 
 .computer .image img {
-  width: 1674px;
-  height: auto;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  transform-origin: 108px 15px 0px;
-  backface-visibility: visible;
-  transform-style: flat;
-  overflow: hidden;
-  transform: matrix3d(0.471296, 0, 0, 0, 0, 0.471296, 0, 0, 0, 0, 1, 0, 0.0555556, 0, 0, 1);
+	width: 1674px;
+	height: auto;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	transform-origin: 108px 15px 0px;
+	backface-visibility: visible;
+	transform-style: flat;
+	overflow: hidden;
+	transform: matrix3d(0.471296, 0, 0, 0, 0, 0.471296, 0, 0, 0, 0, 1, 0, 0.0555556, 0, 0, 1);
 }
 
 .computer .container {
-  padding: 0;
-  position: relative;
+	padding: 0;
+	position: relative;
 }
 
+
+.tablet {
+	background-image: url( '../images/ipad.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 850px;
+	padding: 80px 0;
+	margin: 18px 0;
+}
+
+.tablet .animation {
+	height: 552px;
+	width: 718px;
+	margin-top: -32px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	transform: matrix3d(1.35, 0, 0, 0, 0, 1.35, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
+}
+
+.tablet .image {
+	height: 552px;
+	width: 718px;
+	margin-top: -32px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.tablet .image img {
+	width: 936px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	transform-origin: 0px 32px 0px;
+	backface-visibility: visible;
+	transform-style: flat;
+	overflow: hidden;
+	transform: matrix3d(0.766667, 0, 0, 0, 0, 0.766667, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
+}
+
+.tablet .container {
+	padding: 0;
+	position: relative;
+}
 
 
 /* =========== */
@@ -547,53 +594,6 @@ image, svg, img {
 /* = Path 03 = */
 /* =========== */
 
-.tablet {
-	background-image: url( '../images/ipad.png' );
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 850px;
-	padding: 80px 0;
-	margin: 18px 0;
-}
-
-.tablet .animation {
-	height: 552px;
-	width: 718px;
-	margin-top: -32px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	transform: matrix3d(1.35, 0, 0, 0, 0, 1.35, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
-}
-
-.tablet .image {
-	height: 552px;
-	width: 718px;
-	margin-top: -32px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-}
-
-.tablet .image img {
-	width: 936px;
-	height: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	transform-origin: 0px 32px 0px;
-	backface-visibility: visible;
-	transform-style: flat;
-	overflow: hidden;
-	transform: matrix3d(0.766667, 0, 0, 0, 0, 0.766667, 0, 0, 0, 0, 1, 0, 0.2, 0, 0, 1);
-}
-
-.tablet .container {
-	padding: 0;
-	position: relative;
-}
-
 
 /* Section 01 */
 #tip_p03s01 {
@@ -654,53 +654,6 @@ image, svg, img {
     bottom: 150px;
 }
 
-
-
-/* ======= */
-/* = End = */
-/* ======= */
-
-#end .info .inner {
-	padding: 120px 0;
-}
-
-#end .title {
-	font-size: 38px;
-	line-height: 120%;
-	margin-bottom: 50px;
-	color: #003A47;
-}
-
-.link.dark-hover:hover {
-	background-color: #A03123 !important;
-}
-
-#end .link {
-	width: 215px;
-}
-
-#end .link:hover {
-	color: #fff;
-	background: #003A47;
-}
-
-#end .explore {
-	display: inline-block;
-	margin-top: 20px;
-	font-style: italic;
-	color: #003A47;
-	font-size: 16px;
-}
-
-#end .explore:hover {
-	color: #FA5048;
-}
-
-#end .image img {
-	width: 100%;
-	padding-top: 40px;
-	padding-bottom: 60px;
-}
 
 
 /* ===================================== */
@@ -804,6 +757,52 @@ image, svg, img {
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+}
+
+/* ======= */
+/* = End = */
+/* ======= */
+
+#end .info .inner {
+	padding: 120px 0;
+}
+
+#end .title {
+	font-size: 38px;
+	line-height: 120%;
+	margin-bottom: 50px;
+	color: #003A47;
+}
+
+.link.dark-hover:hover {
+	background-color: #A03123 !important;
+}
+
+#end .link {
+	width: 215px;
+}
+
+#end .link:hover {
+	color: #fff;
+	background: #003A47;
+}
+
+#end .explore {
+	display: inline-block;
+	margin-top: 20px;
+	font-style: italic;
+	color: #003A47;
+	font-size: 16px;
+}
+
+#end .explore:hover {
+	color: #FA5048;
+}
+
+#end .image img {
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 60px;
 }
 
 /* ========== */
@@ -935,6 +934,10 @@ image, svg, img {
 /* = 991px and below = */
 @media only screen and (max-width:991px) {
 
+	#start .inner label {
+		float: none;
+	}
+
 	.computer {
 		background-size: 965px;
 		padding: 80px 0;
@@ -1014,56 +1017,83 @@ image, svg, img {
     padding: 120px 0;
 	}
 
+
+
 	/* === PATH 01 === */
 
 	/* Section 01 */
 
 	#tip_p01s01-1 {
-		left: 262px;
-		bottom: 42px;
+	    left: 135px;
+	    bottom: -5px;
 	}
 
 	#tip_p01s01-2 {
 		left: 262px;
-		bottom: 42px;
+		bottom: 250px;
 	}
+
+	#tip_p01s01-3 {
+	    left: 450px;
+	    bottom: 195px;
+	}
+
 
 	/* Section 02 */
 
-	#tip_p01s02 {
-		left: 300px;
+	#tip_p01s02-1 {
+	    left: 400px;
+	    bottom: 55px;
+	}
+
+	#tip_p01s02-2 {
+	    left: 350px;
+	    bottom: 235px;
+	}
+
+	#tip_p01s02-3 {
+		left: 180px;
+		bottom: 100px;
+	}
+
+	#tip_p01s02-4 {
+		left: 410px;
 		bottom: 215px;
 	}
 
+	#tip_p01s02-5 {
+		left: 390px;
+		bottom: 50px;
+	}
+
+
 	/* Section 03 */
 
-	#tip_p01s03-1 {
-		left: 305px;
-		bottom: 111px;
+	#tip_p01s03 {
+	    left: 245px;
+	    bottom: 70px;
 	}
 
-	#tip_p01s03-2 {
-		left: 490px;
-		bottom: 205px;
-	}
-
-	#tip_p01s03-3 {
-		left: 492px;
-		bottom: 280px;
-	}
 
 	/* Section 04 */
 
-	#tip_p01s04 {
-		left: 634px;
-		bottom: 135px;
+	#tip_p01s04-1 {
+	    left: 300px;
+	    bottom: 150px;
 	}
+
+	#tip_p01s04-2 {
+	    left: 400px;
+	    bottom: 37px;
+	}
+
+
 
 	/* Section 05 */
 
 	#tip_p01s05-1 {
-		left: 326px;
-		bottom: 20px;
+	    left: 250px;
+	    bottom: 135px;
 	}
 
 	#tip_p01s05-2 {
@@ -1079,22 +1109,38 @@ image, svg, img {
 	/* Section 06 */
 
 	#tip_p01s06-1 {
-		left: 580px;
-		bottom: 225px;
+	    left: 120px;
+	    bottom: 43px;
 	}
 
 	#tip_p01s06-2 {
-		left: 318px;
-		bottom: 28px;
+	    left: 205px;
+	    bottom: 50px;
 	}
 
 	#tip_p01s06-3 {
-		left: 318px;
-		bottom: 28px;
+	    left: 500px;
+	    bottom: 35px;
 	}
+
+	#tip_p01s06-4 {
+	    left: 550px;
+	    bottom: 50px;
+	}
+
 
 	/* === PATH 02 === */
 
+
+
+
     /* === PATH 03 === */
+
+
+
+
+	#end .image img.end-image {
+		width: 75%;
+	}
 
 }
