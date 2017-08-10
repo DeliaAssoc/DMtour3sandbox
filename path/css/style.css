@@ -1170,10 +1170,10 @@ image, svg, img {
 	}
 
 	.computer .image {
-		height: 467px;
-		width: 830px;
-		left: -41px;
-		margin-top: -40px;
+    height: 467px;
+    width: 830px;
+    left: -41px;
+    margin-top: -40px;
 	}
 
 	.computer .image img {
