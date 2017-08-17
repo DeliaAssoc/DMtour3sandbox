@@ -54,7 +54,7 @@ button:focus {
 }
 
 body, html {
-  font-family: 'Museo Sans Rounded', Helvetica, sans-serif;
+  font-family: 'Museo Sans Rounded 300', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -341,7 +341,7 @@ image, svg, img {
   background-image: url('../images/radio-button.svg');
   background-position: 50% 35px;
   background-repeat: no-repeat;
-  background-size: 20px;
+  background-size: 20px 20px;
   margin-right: 0;
   padding-top: 60px;
   color: #003A47;
@@ -575,6 +575,7 @@ image, svg, img {
 }
 
 #end .title {
+  font-family: 'Museo Sans Rounded 300';
   font-size: 38px;
   line-height: 120%;
   margin-bottom: 50px;
@@ -607,7 +608,7 @@ image, svg, img {
 }
 
 #end .image img {
-  width: 100%;
+  width: 70%;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -1218,4 +1219,15 @@ image, svg, img {
   #start .inner {
     width: 69%;
   }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   
+   .computer .image img {
+    left: 50px;
+   }
+
+   .computer .animation {
+    left: 0;
+   }
 }

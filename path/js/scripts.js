@@ -401,13 +401,24 @@ function anim_p01s06_2()
 };
 
 
-function anim_p01s06_3()
+function anim_p01s06_3( prev )
 {
   // Activate screen/animation and tooltip
+  // Check to see if click is from previous link
+  if ( prev != null ) {
+    anim_p1_s6.stop();
+  } else {
+
+  }
   $( '#tip_p01s06-3' ).toggleClass( 'inactive active' );
 
   // Trigger animation
-  anim_p1_s6.stop(); // Reset animation for Previous button click
+  setTimeout( function(){
+    anim_p1_s6.playSegments( 0, 50 );
+    setTimeout( function(){ // Use timeout to combat maximum call stack error
+      anim_p1_s6.pause();
+    }, 3000);
+  }, 100);
 };
 
 
@@ -486,7 +497,7 @@ function anim_p02s1_3()
 
   setTimeout( function() { anim_p2_s1_2.play(); }, 1250);
   anim_p2_s1_2.addEventListener( 'loopComplete', function() {
-    anim_p2_s1_2.goToAndStop( 50, true );
+    anim_p2_s1_2.goToAndStop( 75, true );
   }, false);
 }
 
@@ -1163,7 +1174,7 @@ function anim_p03_8()
     $( '#tip_p01s06-4 ').toggleClass( 'active inactive' );
 
     //Trigger animation
-    anim_p01s06_3(); 
+    anim_p01s06_3( 'fromPrev' ); 
   });
 
 
