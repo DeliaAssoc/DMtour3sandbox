@@ -85,6 +85,28 @@ image, svg, img {
   display: none;
 }
 
+.please-select {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #A03123;
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  margin: 0 auto;
+  color: #ffffff;
+  bottom: -120px;
+}
+
+.please-select.inactive {
+  display: none;
+}
+
+.please-select.active {
+  display: block;
+}
+
 .tip.animated {
   -webkit-transition-delay: 10s !important;
   transition-delay: 10s !important;
@@ -608,7 +630,7 @@ image, svg, img {
 }
 
 #end .image img {
-  width: 70%;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 60px;
 }
@@ -1229,5 +1251,9 @@ image, svg, img {
 
    .computer .animation {
     left: 0;
+   }
+
+   #tip_p01s05-1 {
+    bottom: 220px;
    }
 }
